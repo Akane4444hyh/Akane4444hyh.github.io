@@ -82,7 +82,7 @@
     width: 300px;
 }
 #home-card #card-style {
-    background: #fff;
+    background: #ffebf8;
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 20px #d9d9d980;
@@ -101,7 +101,7 @@
     padding: 25px 0;
 }
 #home-card #card-div .avatar {
-    border: #f1f1f1 solid 3px;
+    border: #a7759677 solid 3px;
     border-radius: 50%;
     height: 140px;
     margin: auto;
@@ -141,7 +141,7 @@
 #home-card #card-div .icon-links a:hover,
 #home-card #card-div .friend-links a:hover,
 #home-posts .page-current .page-num:hover {
-    background: #66afef;
+    background: #a7759677;
     color: #fff;
 }
 #home-card #card-div .icon-links,
