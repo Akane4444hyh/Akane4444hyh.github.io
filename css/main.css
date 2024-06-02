@@ -28,7 +28,7 @@
 }
 #archives .categories-tags span a:hover {
     background: #ffffff !important;
-    border: #a5c2f5 1px solid;
+    border: #e6cfe6 1px solid;
     color: #5c6b72;
 }
 #archives .category,
@@ -693,7 +693,7 @@ strong {
     line-height: 2.5;
 }
 blockquote {
-    background: #d9e8ff6b;
+    background: #e6cfe662;
     border-left: 3px solid e6cfe6;
     border-radius: 3px;
     margin: 15px 0;
