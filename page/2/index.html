@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>categories | Akane4444の 喵喵屋</title>
+    <title>Akane4444の 喵喵屋</title>
     <meta name="author" content="Akane4444" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -46,6 +46,8 @@
 
 
 
+
+<script src="/js/lib/home.js"></script>
 
 <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
 <link rel="stylesheet" href="/css/main.css" />
@@ -173,14 +175,42 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="https://cdn.jsdelivr.net/gh/Akane4444hyh/cdn@4.0.4/images/cover/1.jpg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>Akane4444の 喵喵屋</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
         
+
+<div class="post">
+    <a href="/2024/05/10/first%20-%20%E5%89%AF%E6%9C%AC%20(4)/">
+        <h2 class="post-title">最初的章節</h2>
+    </a>
+    <div class="category-and-date">
         
-        
-        <span>
-            <a href="/categories/%E5%88%9D/" style="background: #dda0dd">
+        <span class="category">
+            <a href="/categories/%E5%88%9D/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -188,18 +218,240 @@
             </a>
         </span>
         
-        
-        
-        <span>
-            <a href="/categories/%E4%BB%96%E5%B1%B1%E4%B9%8B%E7%9F%B3/" style="background: #e49689">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                他山之石
-            </a>
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/5/10
         </span>
         
         
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這是最初的章節<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不是最後的章節<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這是最初的禱告<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不是最後的命途</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/05/10/first%20-%20%E5%89%AF%E6%9C%AC%20(4)/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/05/10/first%20-%20%E5%89%AF%E6%9C%AC%20(5)/">
+        <h2 class="post-title">最初的章節</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%88%9D/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                初
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/5/10
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這是最初的章節<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不是最後的章節<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這是最初的禱告<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不是最後的命途</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/05/10/first%20-%20%E5%89%AF%E6%9C%AC%20(5)/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/05/10/first%20-%20%E5%89%AF%E6%9C%AC%20(7)/">
+        <h2 class="post-title">最初的章節</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%88%9D/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                初
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/5/10
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這是最初的章節<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不是最後的章節<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這是最初的禱告<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不是最後的命途</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/05/10/first%20-%20%E5%89%AF%E6%9C%AC%20(7)/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/05/10/first%20-%20%E5%89%AF%E6%9C%AC%20(6)/">
+        <h2 class="post-title">最初的章節</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%88%9D/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                初
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/5/10
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這是最初的章節<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不是最後的章節<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這是最初的禱告<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不是最後的命途</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/05/10/first%20-%20%E5%89%AF%E6%9C%AC%20(6)/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">2</span>
+    
+    <a class="page-num" href="/page/3">
+        3
+    </a>
+    
+    
+    <a class="page-num" href="/page/4">
+        4
+    </a>
+    
+    
+    
+    <a class="page-num" href="/page/3/">
+        <i class="fa-solid fa-caret-right fa-fw"></i>
+    </a>
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="https://cdn.jsdelivr.net/gh/Akane4444hyh/cdn@4.0.4/images/avater.jpg" alt="avatar" />
+        </div>
+        <div class="name">Akane4444</div>
+        <div class="description">
+            <p>如果純和不致死，誰會選擇做雜種喵</p>
+
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/Akane4444hyh">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://twitter.com/Arima_Kana45510">
+                    <i
+                        class="fa-brands fa-twitter fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://space.bilibili.com/1550661056">
+                    <i
+                        class="fa-brands fa-bilibili fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a href="/atom.xml">
+                    <i
+                        class="fa-solid fa-square-rss fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a href="https://akane4444hyh.github.io/">友鏈↓</a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://cyhkbl.github.io">空白棱</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
     </div>
     
 </div>
