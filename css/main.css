@@ -250,7 +250,7 @@
     transition: box-shadow 0.25s, transform 0.25s;
 }
 #home-posts .post .category-and-date {
-    color: #5c6b72;
+    color: #cca3cc;
     margin-top: 15px;
     text-align: center;
     width: 100%;
@@ -265,7 +265,7 @@
 #archives .item-time,
 #archives .categories-tags span a:hover .icon,
 .article .info a {
-    color: #5c6b72;
+    color: #cca3cc;
 }
 #home-posts .post .category-and-date .date,
 #archives .tags,
@@ -291,7 +291,7 @@
     transition: box-shadow 0.25s ease-out, right 0.25s ease-out;
 }
 #home-posts .post .go-post:hover {
-    box-shadow: -2px -2px 10px 0 #92abda7a;
+    box-shadow: -2px -2px 10px 0 #cca3cc7a;
     right: -7px;
 }
 #home-posts .post .post-tags .tag {
@@ -543,7 +543,7 @@ body::-webkit-scrollbar-track {
     vertical-align: top;
 }
 .icon {
-    color: #5c6b72;
+    color: #cca3cc;
     margin-right: 5px;
 }
 .input {
@@ -562,7 +562,7 @@ body::-webkit-scrollbar-track {
 .input:focus {
     background: #fff;
     border-color: #e6cfe6;
-    box-shadow: 0 0 0 3px #0969da4d;
+    box-shadow: 0 0 0 3px #ed99f04d;
     outline: none;
 }
 .input:hover {
@@ -693,7 +693,7 @@ strong {
     line-height: 2.5;
 }
 blockquote {
-    background: #e6cfe662;
+    background: #e6e6fa;
     border-left: 3px solid e6cfe6;
     border-radius: 3px;
     margin: 15px 0;
@@ -701,14 +701,14 @@ blockquote {
     padding: 0 15px;
 }
 body {
-    background: #f6f8fa;
+    background: #f8f8ff;
     color: #382a2a;
     font: 500 14px Lexend, "Noto Sans SC", sans-serif;
     overflow-x: hidden;
     width: 100%;
 }
 code {
-    background: #bddcf76b;
+    background: #e6e6fa;
     border-radius: 4px;
     line-height: 2.5;
     padding: 4px 8px;
@@ -784,10 +784,10 @@ table:not(.hljs-ln) {
     margin: 15px 0;
 }
 table:not(.hljs-ln) td:nth-child(even) {
-    background: #c7e0fb4d;
+    background: #e6e6fa;
 }
 table:not(.hljs-ln) td:nth-child(odd) {
-    background: #d9e8ff4d;
+    background: #e6e6fa;
 }
 table:not(.hljs-ln) th {
     background: #e6cfe6;
@@ -973,3 +973,55 @@ ol li {
         padding-left: 20px;
     }
 }
+.heimu,
+.heimu rt{
+    background-color:#252525;
+}
+ 
+.heimu,
+.heimu a,
+a .heimu,
+a.new .heimu,
+span.heimu a.new,
+span.heimu a.external,
+span.heimu a.external:visited,
+span.heimu a.extiw,
+span.heimu a.extiw:visited,
+span.heimu a.mw-disambig,
+span.heimu a.mw-redirect{
+    transition:color 0.13s linear;
+    color:#252525;
+    text-shadow:none;
+}
+ 
+span.heimu:hover,
+span.heimu:active{
+    color:white;
+}
+ 
+span.heimu:hover a,
+a:hover span.heimu{
+    color:lightblue;
+}
+ 
+span.heimu:hover a:visited,
+a:visited:hover span.heimu{
+    color:#C5CAE9;
+}
+ 
+span.heimu:hover a.new,
+a.new:hover span.heimu{
+    color:#FCC;
+}
+ 
+span.heimu a.new:hover:visited,
+a.new:hover:visited span.heimu{
+    color:#EF9A9A;
+}
+ 
+span.heimu:hover a.extiw:visited,
+a.extiw:visited:hover span.heimu{
+    color:#D1C4E9;
+}
+阅读更多：https://zh.moegirl.org.cn/MediaWiki:Gadget-site-styles.css
+本文引自萌娘百科(https://zh.moegirl.org.cn )，文字内容默认使用《知识共享 署名-非商业性使用-相同方式共享 3.0 中国大陆》协议。
