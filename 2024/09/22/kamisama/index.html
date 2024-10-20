@@ -207,7 +207,7 @@
 
 <h3 id="忽明忽暗的她"><a href="#忽明忽暗的她" class="headerlink" title="忽明忽暗的她"></a>忽明忽暗的她</h3><p>&emsp;&emsp;也許那天潮汐引力異常<span class='heimu' >Giga-Lo-Maniacs</span>的影響，她被我觀測到了。從那之後，她或在視綫裏，或雙手環抱這脖頸依偎在背後，或飄忽于左手邊，默默聆聽囈語。我明白的，月餅從來就不是什麽月亮，視綫盲點之中的她從來都只是觸摸不到的嫦娥，這是只是我幻想中的神明。<br>&emsp;&emsp;我一直是不把朋友當朋友的那種，或許是以假情換真心，用脆弱換取強情，我知道，只要微濁兩勺，這個年紀的心之壁漸漸的就散落一地，行人不知道的，我的過去虛假的，真實消失了，虛假變成了真實。我如願成爲了主角，一個虛假，沒有配角的主角。從小神明就來到了我身邊，我知道她是假的，即便大聲呼喚，也從來看不見她，但那天看見了，我知道她不是真的。她那天説話了，說她是akane_sama,是我一個人的神明。我哭了，因爲我知道我大概是產生幻覺了。<br>&emsp;&emsp;拾起主躰性需要勇氣的，akane_sama是給我勇氣的那個人，給我只成爲她客體的勇氣,我明白的，我之前不明白的，心流之後，目之所及僅有我和她，她不再是子虛烏有的虛像，而是實例化成我的怪獸，成爲我的另一份主體了。<br>&emsp;&emsp;這兩天，akane_sama消失了，我想我失明了，大概是把她看成羊駝的那種失明。<br>&emsp;&emsp;我想起童話書裏的一句話”The tree was happy, but not really…”</p>
 <img src="/images/akane1.jpg" alt="2" title="アカネ" width='600'>
-
+&emsp;&emsp;圖片來源於SSSS.Gridman官方
 
 
 
@@ -240,30 +240,34 @@
             Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
             <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
         </div>
+        <div>
+            文章轉載請注明來自於<a href=https://akane4444hyh.github.io>Akane4444の喵喵屋</a>
+        </div>
         
+        <div >
+            <span id="timeDate">載入天數...</span><span id="times">載入時分秒...</span>
+            <script>
+                var now = new Date(); 
+                function createtime() { 
+                    var grt= new Date("05/10/2024 00:00:00");//在此处修改你的建站时间
+                    now.setTime(now.getTime()+250); 
+                    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                    document.getElementById("timeDate").innerHTML = "已運行 "+dnum+" 天 "; 
+                    document.getElementById("times").innerHTML = hnum + " 小時 " + mnum + " 分 " + snum + " 秒   "; 
+                } 
+            setInterval("createtime()",250);
+            </script>
+            <span id="busuanzi_container_site_uv">
+                本站訪問數<span id="busuanzi_value_site_uv"></span>人次
+            </span>          
+            </div>  
     </div>
-    <div>
-        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-        <script>
-            var now = new Date(); 
-            function createtime() { 
-                var grt= new Date("05/10/2024 00:00:00");//在此处修改你的建站时间
-                now.setTime(now.getTime()+250); 
-                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-                document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
-                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒   "; 
-            } 
-        setInterval("createtime()",250);
-        </script>
-        <span id="busuanzi_container_site_uv">
-            本站访客数<span id="busuanzi_value_site_uv"></span>人次
-        </span>          
-        </div>  
+   
         
         
 </footer>
