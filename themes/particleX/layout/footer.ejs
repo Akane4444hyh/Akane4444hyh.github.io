@@ -1,0 +1,51 @@
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            <%= theme.footer.since %> - <%= date(Date.now(), "YYYY") %> <%= config.title %>
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;<%= config.author %>
+        </div>
+        <div>
+            Based on the <a href="https://hexo.io">Hexo Engine</a> &amp;
+            <a href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        <% if (theme.footer.ICP.enable) { %>
+        <div>
+            备案号：
+            <% if (theme.footer.ICP.link) { %>
+            <a href="<%- url_for(theme.footer.ICP.link) %>"><%= theme.footer.ICP.code %></a>
+            <% } else { %>
+            <%= theme.footer.ICP.code %>
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+    <div>
+        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+        <script>
+            var now = new Date(); 
+            function createtime() { 
+                var grt= new Date("05/10/2024 00:00:00");//在此处修改你的建站时间
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒   "; 
+            } 
+        setInterval("createtime()",250);
+        </script>
+        <span id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>          
+        </div>  
+        
+        
+</footer>
