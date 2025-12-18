@@ -202,13 +202,13 @@
     </div>
     
     <div class="content" v-pre>
-        <p>本文章将记录本人从2025年12月18日开始的量化交易学习记录</p>
+        <p>本文章將記錄本人從2025年12月18日開始的量化交易學習記錄</p>
 <!-- toc -->
 
 <ul>
 <li><a href="#1218">12.18</a><ul>
-<li><a href="#emspemsp%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E5%AD%A6%E4%B9%A0%E5%AF%BC%E5%9B%BE">&emsp;&emsp;量化交易学习导图</a><ul>
-<li><a href="#emspemsp%E8%AF%9D%E6%9C%AF%E5%96%B5">&emsp;&emsp;话术喵</a></li>
+<li><a href="#emspemsp%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E5%AD%B8%E7%BF%92%E5%B0%8E%E5%9C%96">&emsp;&emsp;量化交易學習導圖</a><ul>
+<li><a href="#emspemsp%E8%A9%B1%E8%A1%93%E5%96%B5">&emsp;&emsp;話術喵</a></li>
 </ul>
 </li>
 </ul>
@@ -216,168 +216,189 @@
 </ul>
 <!-- tocstop -->
 
-<span id="more"></span> 
+<span id="more"></span>
 
 <hr>
-<h1><span id="1218">12.18</span></h1><h2><span id="emspemsp量化交易学习导图">&emsp;&emsp;量化交易学习导图</span></h2><ul>
-<li><p><strong>金融基础</strong></p>
+<h1><span id="1218">12.18</span></h1><h2><span id="emspemsp量化交易學習導圖">&emsp;&emsp;量化交易學習導圖</span></h2><ul>
+<li><p><strong>金融基礎</strong></p>
+</li>
+<li><p>股票 &#x2F; 債券 &#x2F; 現金</p>
+</li>
+<li><p>市場機制</p>
+</li>
+<li><p>風險 &#x2F; 回撤</p>
+</li>
+<li><p>交易常識（手續費、滑點）</p>
+</li>
+<li><p>衍生品（期權、期貨）</p>
+</li>
+<li><p>基本面 vs 技術面</p>
+</li>
+<li><p>投資心理 &#x2F; 行爲金融</p>
+</li>
+<li><p><strong>編程基礎</strong></p>
+</li>
+<li><p>Python</p>
+</li>
+<li><p>Numpy &#x2F; Pandas</p>
+</li>
+<li><p>Matplotlib &#x2F; Seaborn（可視化）</p>
+</li>
+<li><p>Jupyter Notebook（交互實驗）</p>
+</li>
+<li><p>回測庫（TA-Lib, bt, backtrader）</p>
+</li>
+<li><p><strong>數學與統計</strong></p>
+</li>
+<li><p>線性代數</p>
+</li>
+<li><p>概率論</p>
+</li>
+<li><p>統計思維</p>
+</li>
+<li><p>回歸分析 &#x2F; 因子模型</p>
+</li>
+<li><p>時間序列分析（均值回歸、ARMA&#x2F;ARIMA）</p>
+</li>
+<li><p><strong>數據與策略</strong></p>
+</li>
+<li><p>數據獲取</p>
+</li>
+<li><p>歷史行情數據</p>
+</li>
+<li><p>API（Tushare, yfinance）</p>
+</li>
+<li><p>數據清洗與處理</p>
+</li>
+<li><p>策略思想</p>
+</li>
+<li><p>均線策略</p>
+</li>
+<li><p>動量 &#x2F; 均值回歸</p>
+</li>
+<li><p>因子策略</p>
+</li>
+<li><p>事件驅動策略</p>
+</li>
+<li><p>套利策略</p>
+</li>
+<li><p>回測分析</p>
+</li>
+<li><p>收益率</p>
+</li>
+<li><p>最大回撤</p>
+</li>
+<li><p>夏普比率 &#x2F; 信息比率</p>
+</li>
+<li><p>勝率 &#x2F; 盈虧比</p>
+</li>
+<li><p>交易成本敏感性分析</p>
+</li>
+<li><p><strong>風險控制</strong></p>
+</li>
+<li><p>倉位管理（不滿倉、風險預算）</p>
+</li>
+<li><p>止損止盈（控制虧損）</p>
+</li>
+<li><p>風險指標（VaR、CVaR、多策略組合）</p>
+</li>
+<li><p><strong>實盤與反思</strong></p>
+</li>
+<li><p>模擬盤</p>
+</li>
+<li><p>復盤</p>
+</li>
+<li><p>記錄（策略參數、市場情況、情緒、回測 vs 實盤偏差）</p>
+</li>
+</ul>
+<p>&emsp;&emsp;量化交易平臺:Joinquant，ricequant ; quantconnected<br>&emsp;&emsp;<br>&emsp;&emsp;</p>
+<h3><span id="emspemsp話術喵">&emsp;&emsp;話術喵</span></h3><p><strong>交易與市場基礎</strong></p>
 <ul>
-<li>股票 &#x2F; 债券 &#x2F; 现金</li>
-<li>市场机制</li>
-<li>风险 &#x2F; 回撤</li>
-<li>交易常识（手续费、滑点）</li>
-<li>衍生品（期权、期货）</li>
-<li>基本面 vs 技术面</li>
-<li>投资心理 &#x2F; 行为金融</li>
-</ul>
-</li>
-<li><p><strong>编程基础</strong></p>
-<ul>
-<li>Python</li>
-<li>Numpy &#x2F; Pandas</li>
-<li>Matplotlib &#x2F; Seaborn（可视化）</li>
-<li>Jupyter Notebook（交互实验）</li>
-<li>回测库（TA-Lib, bt, backtrader）</li>
-</ul>
-</li>
-<li><p><strong>数学与统计</strong></p>
-<ul>
-<li>线性代数</li>
-<li>概率论</li>
-<li>统计思维</li>
-<li>回归分析 &#x2F; 因子模型</li>
-<li>时间序列分析（均值回归、ARMA&#x2F;ARIMA）</li>
-</ul>
-</li>
-<li><p><strong>数据与策略</strong></p>
-<ul>
-<li>数据获取<ul>
-<li>历史行情数据</li>
-<li>API（Tushare, yfinance）</li>
-</ul>
-</li>
-<li>数据清洗与处理</li>
-<li>策略思想<ul>
-<li>均线策略</li>
-<li>动量 &#x2F; 均值回归</li>
-<li>因子策略</li>
-<li>事件驱动策略</li>
-<li>套利策略</li>
-</ul>
-</li>
-<li>回测分析<ul>
-<li>收益率</li>
-<li>最大回撤</li>
-<li>夏普比率 &#x2F; 信息比率</li>
-<li>胜率 &#x2F; 盈亏比</li>
-<li>交易成本敏感性分析</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>风险控制</strong></p>
-<ul>
-<li>仓位管理（不满仓、风险预算）</li>
-<li>止损止盈（控制亏损）</li>
-<li>风险指标（VaR、CVaR、多策略组合）</li>
-</ul>
-</li>
-<li><p><strong>实盘与反思</strong></p>
-<ul>
-<li>模拟盘</li>
-<li>复盘</li>
-<li>记录（策略参数、市场情况、情绪、回测 vs 实盘偏差）</li>
-</ul>
-</li>
-</ul>
-<p>&emsp;&emsp;量化交易平台:Joinquant，ricequant ; quantconnected<br>&emsp;&emsp;<br>&emsp;&emsp;</p>
-<h3><span id="emspemsp话术喵">&emsp;&emsp;话术喵</span></h3><p><strong>交易与市场基础</strong></p>
-<ul>
-<li><strong>标的资产（Asset）</strong>：实际交易的对象，如股票、ETF、期货、期权</li>
-<li><strong>多头&#x2F;空头（Long&#x2F;Short）</strong>：多头是先买后卖期待上涨；空头是先卖后买期待下跌（在A股，个人投资者通常需通过融券、股指期货等工具实现）</li>
-<li><strong>成交价&#x2F;开盘价&#x2F;收盘价</strong>：成交价：某一笔交易实际发生的价格；开盘价：当日第一笔成交价格，反映隔夜信息的集中释放；收盘价：在连续竞价市场（如A股），通常指收盘集合竞价产生的价格。因其避免尾盘操纵、稳定可复现，是量化研究中最常用的基准价格。</li>
-<li><strong>滑点（Slippage）</strong>：预期成交价与实际成交价的差额，常由市场波动、流动性不足或订单规模导致</li>
-<li><strong>冲击成本（Impact Cost）</strong>：大额订单本身对市场价格产生的不利影响，是滑点的主要来源之一</li>
-<li><strong>手续费（Commission）</strong>：每次交易产生的固定或按比例收取的成本，高频策略必须重点考虑</li>
-<li><strong>流动性（Liquidity）</strong>：资产是否能被快速、低成本地买卖成交</li>
-<li><strong>成交量&#x2F;成交额（Volume&#x2F;Turnover）</strong>：成交量指成交的股数&#x2F;手数；成交额指成交的金额，反映市场活跃度（另见“换手率”）</li>
-<li><strong>盘口&#x2F;订单簿（Order Book）</strong>：显示当前买卖挂单价格和数量的实时列表</li>
-<li><strong>最小变动单位（Tick Size）</strong>：价格变动的最小单位，如A股为0.01元</li>
-<li><strong>做市商（Market Maker）</strong>：提供双向报价，为市场提供流动性的机构</li>
+<li><strong>標的資產（Asset）</strong>：實際交易的對象，如股票、ETF、期貨、期權</li>
+<li><strong>多頭&#x2F;空頭（Long&#x2F;Short）</strong>：多頭是先買後賣期待上漲；空頭是先賣後買期待下跌（在A股，個人投資者通常需通過融券、股指期貨等工具實現）</li>
+<li><strong>成交價&#x2F;開盤價&#x2F;收盤價</strong>：成交價：某一筆交易實際發生的價格；開盤價：當日第一筆成交價格，反映隔夜信息的集中釋放；收盤價：在連續競價市場（如A股），通常指收盤集合競價產生的價格。因其避免尾盤操縱、穩定可復現，是量化研究中最常用的基準價格。</li>
+<li><strong>滑點（Slippage）</strong>：預期成交價與實際成交價的差額，常由市場波動、流動性不足或訂單規模導致</li>
+<li><strong>衝擊成本（Impact Cost）</strong>：大額訂單本身對市場價格產生的不利影響，是滑點的主要來源之一</li>
+<li><strong>手續費（Commission）</strong>：每次交易產生的固定或按比例收取的成本，高頻策略必須重點考慮</li>
+<li><strong>流動性（Liquidity）</strong>：資產是否能被快速、低成本地買賣成交</li>
+<li><strong>成交量&#x2F;成交額（Volume&#x2F;Turnover）</strong>：成交量指成交的股數&#x2F;手數；成交額指成交的金額，反映市場活躍度（另見“換手率”）</li>
+<li><strong>盤口&#x2F;訂單簿（Order Book）</strong>：顯示當前買賣掛單價格和數量的實時列表</li>
+<li><strong>最小變動單位（Tick Size）</strong>：價格變動的最小單位，如A股爲0.01元</li>
+<li><strong>做市商（Market Maker）</strong>：提供雙向報價，爲市場提供流動性的機構</li>
 </ul>
 <hr>
-<p><strong>收益与风险指标</strong></p>
+<p><strong>收益與風險指標</strong></p>
 <ul>
-<li><strong>收益率（Return）</strong>：投资盈利的比例，可分为绝对收益和相对收益</li>
-<li><strong>回撤（Drawdown）</strong>：从历史最高点到后续最低点的跌幅；最大回撤表示历史最惨的一次亏损</li>
-<li><strong>波动率（Volatility）</strong>：收益率波动的标准差，是衡量价格不确定性的核心风险指标</li>
-<li><strong>夏普比率（Sharpe Ratio）</strong>：每承担一单位总风险获得的超额收益，越高说明风险调整后收益越好</li>
-<li><strong>信息比率（Information Ratio）</strong>：超额收益与跟踪误差的比值，衡量单位主动风险所带来的超额收益，用于评估主动管理能力的效率与稳定性</li>
-<li><strong>年化收益&#x2F;年化波动率</strong>：将不同周期数据标准化为年率，便于策略横向比较</li>
-<li><strong>索提诺比率（Sortino Ratio）</strong>：类似夏普比率，但只考虑下行风险</li>
+<li><strong>收益率（Return）</strong>：投資盈利的比例，可分爲絕對收益和相對收益</li>
+<li><strong>回撤（Drawdown）</strong>：從歷史最高點到後續最低點的跌幅；最大回撤表示歷史最慘的一次虧損</li>
+<li><strong>波動率（Volatility）</strong>：收益率波動的標準差，是衡量價格不確定性的核心風險指標</li>
+<li><strong>夏普比率（Sharpe Ratio）</strong>：每承擔一單位總風險獲得的超額收益，越高說明風險調整後收益越好</li>
+<li><strong>信息比率（Information Ratio）</strong>：超額收益與跟蹤誤差的比值，衡量單位主動風險所帶來的超額收益，用於評估主動管理能力的效率與穩定性</li>
+<li><strong>年化收益&#x2F;年化波動率</strong>：將不同周期數據標準化爲年率，便於策略橫向比較</li>
+<li><strong>索提諾比率（Sortino Ratio）</strong>：類似夏普比率，但只考慮下行風險</li>
 </ul>
 <hr>
-<p><strong>策略思想与类型</strong></p>
+<p><strong>策略思想與類型</strong></p>
 <ul>
-<li><strong>基本面分析（Fundamental）</strong>：研究公司内在价值，如财务数据、行业地位、管理团队</li>
-<li><strong>技术分析（Technical）</strong>：基于价格、成交量等市场数据进行分析，如K线、均线、指标</li>
-<li><strong>因子（Factor）</strong>：可解释股票收益的特征变量，如价值、规模、动量、质量因子</li>
-<li><strong>动量（Momentum）</strong>：涨得多的资产可能继续上涨，跌得多的可能继续下跌</li>
-<li><strong>均值回归（Mean Reversion）</strong>：价格偏离其长期均值后会回归到平均水平</li>
-<li><strong>事件驱动（Event Driven）</strong>：利用财报发布、并购公告、政策变化等事件进行交易</li>
-<li><strong>市场中性（Market Neutral）</strong>：通过同时构建多空头寸对冲市场方向性风险</li>
-<li><strong>统计套利（Statistical Arbitrage）</strong>：基于资产价格间长期存在的稳定统计关系（如协整、价差均值回归） 进行交易。当价差偏离时构建多空组合，期待其回归并获利。</li>
-<li><strong>高频交易（HFT）</strong>：利用极短时间内的市场微观结构进行交易</li>
+<li><strong>基本面分析（Fundamental）</strong>：研究公司內在價值，如財務數據、行業地位、管理團隊</li>
+<li><strong>技術分析（Technical）</strong>：基於價格、成交量等市場數據進行分析，如K線、均線、指標</li>
+<li><strong>因子（Factor）</strong>：可解釋股票收益的特徵變量，如價值、規模、動量、質量因子</li>
+<li><strong>動量（Momentum）</strong>：漲得多的資產可能繼續上漲，跌得多的可能繼續下跌</li>
+<li><strong>均值回歸（Mean Reversion）</strong>：價格偏離其長期均值後會回歸到平均水平</li>
+<li><strong>事件驅動（Event Driven）</strong>：利用財報發布、並購公告、政策變化等事件進行交易</li>
+<li><strong>市場中性（Market Neutral）</strong>：通過同時構建多空頭寸對衝市場方向性風險</li>
+<li><strong>統計套利（Statistical Arbitrage）</strong>：基於資產價格間長期存在的穩定統計關系（如協整、價差均值回歸） 進行交易。當價差偏離時構建多空組合，期待其回歸並獲利。</li>
+<li><strong>高頻交易（HFT）</strong>：利用極短時間內的市場微觀結構進行交易</li>
 </ul>
 <hr>
-<p><strong>回测与验证</strong></p>
+<p><strong>回測與驗證</strong></p>
 <ul>
-<li><strong>回测（Backtest）</strong>：使用历史数据验证策略逻辑和效果</li>
-<li><strong>过拟合（Overfitting）</strong>：策略过度优化，只适合历史数据而不具备未来泛化能力</li>
-<li><strong>样本外测试（Out-of-sample）</strong>：使用未参与参数优化的数据验证策略</li>
-<li><strong>幸存者偏差（Survivorship Bias）</strong>：只使用当前仍存在的标的数据回测，导致结果虚高</li>
-<li><strong>前视偏差（Look-ahead Bias）</strong>：回测中误用了当时不可得的未来信息</li>
-<li><strong>交易成本</strong>：回测中常被低估的实际成本，包括手续费、滑点和冲击成本</li>
+<li><strong>回測（Backtest）</strong>：使用歷史數據驗證策略邏輯和效果</li>
+<li><strong>過擬合（Overfitting）</strong>：策略過度優化，只適合歷史數據而不具備未來泛化能力</li>
+<li><strong>樣本外測試（Out-of-sample）</strong>：使用未參與參數優化的數據驗證策略</li>
+<li><strong>幸存者偏差（Survivorship Bias）</strong>：只使用當前仍存在的標的數據回測，導致結果虛高</li>
+<li><strong>前視偏差（Look-ahead Bias）</strong>：回測中誤用了當時不可得的未來信息</li>
+<li><strong>交易成本</strong>：回測中常被低估的實際成本，包括手續費、滑點和衝擊成本</li>
 </ul>
 <hr>
-<p><strong>风险控制与资金管理</strong></p>
+<p><strong>風險控制與資金管理</strong></p>
 <ul>
-<li><strong>仓位（Position）</strong>：在某一标的上的投资资金占总资金的比例</li>
-<li><strong>满仓&#x2F;半仓&#x2F;空仓</strong>：满仓表示资金全部投入；半仓保留部分现金；空仓无持仓</li>
-<li><strong>止损&#x2F;止盈（Stop Loss&#x2F;Take Profit）</strong>：止损用于控制亏损，止盈用于锁定收益</li>
-<li><strong>换手率（Turnover）</strong>：单位时间内资产的交易频率。</li>
-<li><strong>风险预算（Risk Budgeting）</strong>：为不同资产或策略分配可承受的风险额度</li>
-<li><strong>VaR&#x2F;CVaR</strong>：VaR为一定置信度下的最大可能损失；CVaR为超过VaR的极端损失平均值</li>
-<li><strong>杠杆（Leverage）</strong>：通过借入资金或衍生品放大投资头寸，从而同步放大收益与风险</li>
-<li><strong>分散化（Diversification）</strong>：通过投资不同资产降低整体风险</li>
+<li><strong>倉位（Position）</strong>：在某一標的上的投資資金佔總資金的比例</li>
+<li><strong>滿倉&#x2F;半倉&#x2F;空倉</strong>：滿倉表示資金全部投入；半倉保留部分現金；空倉無持倉</li>
+<li><strong>止損&#x2F;止盈（Stop Loss&#x2F;Take Profit）</strong>：止損用於控制虧損，止盈用於鎖定收益</li>
+<li><strong>換手率（Turnover）</strong>：單位時間內資產的交易頻率。</li>
+<li><strong>風險預算（Risk Budgeting）</strong>：爲不同資產或策略分配可承受的風險額度</li>
+<li><strong>VaR&#x2F;CVaR</strong>：VaR爲一定置信度下的最大可能損失；CVaR爲超過VaR的極端損失平均值</li>
+<li><strong>槓杆（Leverage）</strong>：通過借入資金或衍生品放大投資頭寸，從而同步放大收益與風險</li>
+<li><strong>分散化（Diversification）</strong>：通過投資不同資產降低整體風險</li>
 </ul>
 <hr>
-<p><strong>基准与绩效评估</strong></p>
+<p><strong>基準與績效評估</strong></p>
 <ul>
-<li><strong>基准（Benchmark）</strong>：用于对比策略表现的参考标准，如沪深300、中证500</li>
-<li><strong>Alpha（α）</strong>：策略相对于基准的超额收益，是主动管理的核心目标</li>
-<li><strong>Beta（β）</strong>：策略收益对基准收益波动的敏感度，衡量市场风险暴露</li>
-<li><strong>跟踪误差（Tracking Error）</strong>：策略收益与基准收益差异的波动率</li>
-<li><strong>最大回撤期（Max Drawdown Duration）</strong>：从回撤开始到恢复新高所需的最长时间</li>
+<li><strong>基準（Benchmark）</strong>：用於對比策略表現的參考標準，如滬深300、中證500</li>
+<li><strong>Alpha（α）</strong>：策略相對於基準的超額收益，是主動管理的核心目標</li>
+<li><strong>Beta（β）</strong>：策略收益對基準收益波動的敏感度，衡量市場風險暴露</li>
+<li><strong>跟蹤誤差（Tracking Error）</strong>：策略收益與基準收益差異的波動率</li>
+<li><strong>最大回撤期（Max Drawdown Duration）</strong>：從回撤開始到恢復新高所需的最長時間</li>
 </ul>
 <hr>
-<p><strong>信号与执行</strong></p>
+<p><strong>信號與執行</strong></p>
 <ul>
-<li><strong>信号（Signal）</strong>：指示买卖方向、时机或数量的量化信息</li>
-<li><strong>执行（Execution）</strong>：将交易指令转化为实际成交的过程</li>
-<li><strong>市价单&#x2F;限价单</strong>：市价单保证成交但不保证价格；限价单保证价格但不保证成交</li>
-<li><strong>算法交易（Algorithmic Trading）</strong>：使用程序自动拆分和执行大额订单以降低冲击成本</li>
-<li><strong>执行落差（Implementation Shortfall）</strong>：策略理论收益与实际执行收益的差距</li>
+<li><strong>信號（Signal）</strong>：指示買賣方向、時機或數量的量化信息</li>
+<li><strong>執行（Execution）</strong>：將交易指令轉化爲實際成交的過程</li>
+<li><strong>市價單&#x2F;限價單</strong>：市價單保證成交但不保證價格；限價單保證價格但不保證成交</li>
+<li><strong>算法交易（Algorithmic Trading）</strong>：使用程序自動拆分和執行大額訂單以降低衝擊成本</li>
+<li><strong>執行落差（Implementation Shortfall）</strong>：策略理論收益與實際執行收益的差距</li>
 </ul>
 <hr>
-<p><strong>市场与参与者</strong></p>
+<p><strong>市場與參與者</strong></p>
 <ul>
-<li><strong>一级&#x2F;二级市场</strong>：一级市场是发行市场；二级市场是流通交易市场</li>
-<li><strong>交易所&#x2F;场外市场</strong>：交易所是集中竞价场所；场外市场是双边协商交易</li>
-<li><strong>机构投资者&#x2F;散户</strong>：机构是专业投资者；散户是个人投资者</li>
-<li><strong>量化基金&#x2F;对冲基金</strong>：主要使用量化方法的投资机构</li>
-<li><strong>自营交易公司</strong>：使用自有资金进行交易的公司</li>
-<li><strong>养老金&#x2F;保险资金</strong>：长期机构投资者，追求稳健收益</li>
+<li><strong>一級&#x2F;二級市場</strong>：一級市場是發行市場；二級市場是流通交易市場</li>
+<li><strong>交易所&#x2F;場外市場</strong>：交易所是集中競價場所；場外市場是雙邊協商交易</li>
+<li><strong>機構投資者&#x2F;散戶</strong>：機構是專業投資者；散戶是個人投資者</li>
+<li><strong>量化基金&#x2F;對衝基金</strong>：主要使用量化方法的投資機構</li>
+<li><strong>自營交易公司</strong>：使用自有資金進行交易的公司</li>
+<li><strong>養老金&#x2F;保險資金</strong>：長期機構投資者，追求穩健收益</li>
 </ul>
 
     </div>
