@@ -719,25 +719,27 @@ h3,
 h4,
 h5,
 h6 {
-    color: #cca3cc;
     font-weight: bold;
-    margin: 15px 0;
     word-break: keep-all;
+    margin: 15px 0;
 }
 h1 {
-    font-size: 30px;
-}dd
+    color: #cca3cc;
+    font-size: 33px;
+}
 h2 {
+    color: #000000;
     font-size: 27px;
 }
 h3 {
-    font-size: 24px;
-}
-h4 {
+    color: #000000;
     font-size: 21px;
 }
-h5 {
+h4 {
     font-size: 18px;
+}
+h5 {
+    font-size: 15px;
 }
 h6 {
     font-size: 15px;
@@ -1023,5 +1025,3 @@ span.heimu:hover a.extiw:visited,
 a.extiw:visited:hover span.heimu{
     color:#D1C4E9;
 }
-阅读更多：https://zh.moegirl.org.cn/MediaWiki:Gadget-site-styles.css
-本文引自萌娘百科(https://zh.moegirl.org.cn )，文字内容默认使用《知识共享 署名-非商业性使用-相同方式共享 3.0 中国大陆》协议。

@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>量化交易筆記 | Akane4444の 喵喵屋</title>
+    <meta name="author" content="Akane4444" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avater2.png" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="preconnect" href="https://static-argvchs.netlify.app" />
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Akane4444の 喵喵屋" type="application/atom+xml">
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>Tips:多按F5喵（圖片加載慢慢）</p>
+                    <p>     使用魔法會更快喵</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>AKANE4444の 喵喵屋</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;主頁</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;關於我</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;歸檔</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分類</span>
+        </a>
+        
+        <a href="/comment">
+            <i class="fa-solid fa-comment fa-fw"></i>
+            <span>&ensp;討論區</span>
+        </a>
+        
+        <a href="/atom.xml">
+            <i class="fa-solid fa-square-rss fa-fw"></i>
+            <span>&ensp;RSS</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;AKANE4444の 喵喵屋</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">主頁</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">關於我</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">歸檔</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">分類</div>
+                    </div>
+                </a>
+                
+                <a href="/comment">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-comment fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">討論區</div>
+                    </div>
+                </a>
+                
+                <a href="/atom.xml">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-square-rss fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">RSS</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>量化交易筆記</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/12/16
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%8A%80%E7%B6%93%E8%82%AF%E7%B6%AE/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                技經肯綮
+            </a>
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>本文章将记录本人从2025年12月18日开始的量化交易学习记录</p>
+<!-- toc -->
+
+<ul>
+<li><a href="#1218">12.18</a><ul>
+<li><a href="#emspemsp%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E5%AD%A6%E4%B9%A0%E5%AF%BC%E5%9B%BE">&emsp;&emsp;量化交易学习导图</a><ul>
+<li><a href="#emspemsp%E8%AF%9D%E6%9C%AF%E5%96%B5">&emsp;&emsp;话术喵</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<span id="more"></span> 
+
+<hr>
+<h1><span id="1218">12.18</span></h1><h2><span id="emspemsp量化交易学习导图">&emsp;&emsp;量化交易学习导图</span></h2><ul>
+<li><p><strong>金融基础</strong></p>
+<ul>
+<li>股票 &#x2F; 债券 &#x2F; 现金</li>
+<li>市场机制</li>
+<li>风险 &#x2F; 回撤</li>
+<li>交易常识（手续费、滑点）</li>
+<li>衍生品（期权、期货）</li>
+<li>基本面 vs 技术面</li>
+<li>投资心理 &#x2F; 行为金融</li>
+</ul>
+</li>
+<li><p><strong>编程基础</strong></p>
+<ul>
+<li>Python</li>
+<li>Numpy &#x2F; Pandas</li>
+<li>Matplotlib &#x2F; Seaborn（可视化）</li>
+<li>Jupyter Notebook（交互实验）</li>
+<li>回测库（TA-Lib, bt, backtrader）</li>
+</ul>
+</li>
+<li><p><strong>数学与统计</strong></p>
+<ul>
+<li>线性代数</li>
+<li>概率论</li>
+<li>统计思维</li>
+<li>回归分析 &#x2F; 因子模型</li>
+<li>时间序列分析（均值回归、ARMA&#x2F;ARIMA）</li>
+</ul>
+</li>
+<li><p><strong>数据与策略</strong></p>
+<ul>
+<li>数据获取<ul>
+<li>历史行情数据</li>
+<li>API（Tushare, yfinance）</li>
+</ul>
+</li>
+<li>数据清洗与处理</li>
+<li>策略思想<ul>
+<li>均线策略</li>
+<li>动量 &#x2F; 均值回归</li>
+<li>因子策略</li>
+<li>事件驱动策略</li>
+<li>套利策略</li>
+</ul>
+</li>
+<li>回测分析<ul>
+<li>收益率</li>
+<li>最大回撤</li>
+<li>夏普比率 &#x2F; 信息比率</li>
+<li>胜率 &#x2F; 盈亏比</li>
+<li>交易成本敏感性分析</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>风险控制</strong></p>
+<ul>
+<li>仓位管理（不满仓、风险预算）</li>
+<li>止损止盈（控制亏损）</li>
+<li>风险指标（VaR、CVaR、多策略组合）</li>
+</ul>
+</li>
+<li><p><strong>实盘与反思</strong></p>
+<ul>
+<li>模拟盘</li>
+<li>复盘</li>
+<li>记录（策略参数、市场情况、情绪、回测 vs 实盘偏差）</li>
+</ul>
+</li>
+</ul>
+<p>&emsp;&emsp;量化交易平台:Joinquant，ricequant ; quantconnected<br>&emsp;&emsp;<br>&emsp;&emsp;</p>
+<h3><span id="emspemsp话术喵">&emsp;&emsp;话术喵</span></h3><p><strong>交易与市场基础</strong></p>
+<ul>
+<li><strong>标的资产（Asset）</strong>：实际交易的对象，如股票、ETF、期货、期权</li>
+<li><strong>多头&#x2F;空头（Long&#x2F;Short）</strong>：多头是先买后卖期待上涨；空头是先卖后买期待下跌（在A股，个人投资者通常需通过融券、股指期货等工具实现）</li>
+<li><strong>成交价&#x2F;开盘价&#x2F;收盘价</strong>：成交价：某一笔交易实际发生的价格；开盘价：当日第一笔成交价格，反映隔夜信息的集中释放；收盘价：在连续竞价市场（如A股），通常指收盘集合竞价产生的价格。因其避免尾盘操纵、稳定可复现，是量化研究中最常用的基准价格。</li>
+<li><strong>滑点（Slippage）</strong>：预期成交价与实际成交价的差额，常由市场波动、流动性不足或订单规模导致</li>
+<li><strong>冲击成本（Impact Cost）</strong>：大额订单本身对市场价格产生的不利影响，是滑点的主要来源之一</li>
+<li><strong>手续费（Commission）</strong>：每次交易产生的固定或按比例收取的成本，高频策略必须重点考虑</li>
+<li><strong>流动性（Liquidity）</strong>：资产是否能被快速、低成本地买卖成交</li>
+<li><strong>成交量&#x2F;成交额（Volume&#x2F;Turnover）</strong>：成交量指成交的股数&#x2F;手数；成交额指成交的金额，反映市场活跃度（另见“换手率”）</li>
+<li><strong>盘口&#x2F;订单簿（Order Book）</strong>：显示当前买卖挂单价格和数量的实时列表</li>
+<li><strong>最小变动单位（Tick Size）</strong>：价格变动的最小单位，如A股为0.01元</li>
+<li><strong>做市商（Market Maker）</strong>：提供双向报价，为市场提供流动性的机构</li>
+</ul>
+<hr>
+<p><strong>收益与风险指标</strong></p>
+<ul>
+<li><strong>收益率（Return）</strong>：投资盈利的比例，可分为绝对收益和相对收益</li>
+<li><strong>回撤（Drawdown）</strong>：从历史最高点到后续最低点的跌幅；最大回撤表示历史最惨的一次亏损</li>
+<li><strong>波动率（Volatility）</strong>：收益率波动的标准差，是衡量价格不确定性的核心风险指标</li>
+<li><strong>夏普比率（Sharpe Ratio）</strong>：每承担一单位总风险获得的超额收益，越高说明风险调整后收益越好</li>
+<li><strong>信息比率（Information Ratio）</strong>：超额收益与跟踪误差的比值，衡量单位主动风险所带来的超额收益，用于评估主动管理能力的效率与稳定性</li>
+<li><strong>年化收益&#x2F;年化波动率</strong>：将不同周期数据标准化为年率，便于策略横向比较</li>
+<li><strong>索提诺比率（Sortino Ratio）</strong>：类似夏普比率，但只考虑下行风险</li>
+</ul>
+<hr>
+<p><strong>策略思想与类型</strong></p>
+<ul>
+<li><strong>基本面分析（Fundamental）</strong>：研究公司内在价值，如财务数据、行业地位、管理团队</li>
+<li><strong>技术分析（Technical）</strong>：基于价格、成交量等市场数据进行分析，如K线、均线、指标</li>
+<li><strong>因子（Factor）</strong>：可解释股票收益的特征变量，如价值、规模、动量、质量因子</li>
+<li><strong>动量（Momentum）</strong>：涨得多的资产可能继续上涨，跌得多的可能继续下跌</li>
+<li><strong>均值回归（Mean Reversion）</strong>：价格偏离其长期均值后会回归到平均水平</li>
+<li><strong>事件驱动（Event Driven）</strong>：利用财报发布、并购公告、政策变化等事件进行交易</li>
+<li><strong>市场中性（Market Neutral）</strong>：通过同时构建多空头寸对冲市场方向性风险</li>
+<li><strong>统计套利（Statistical Arbitrage）</strong>：基于资产价格间长期存在的稳定统计关系（如协整、价差均值回归） 进行交易。当价差偏离时构建多空组合，期待其回归并获利。</li>
+<li><strong>高频交易（HFT）</strong>：利用极短时间内的市场微观结构进行交易</li>
+</ul>
+<hr>
+<p><strong>回测与验证</strong></p>
+<ul>
+<li><strong>回测（Backtest）</strong>：使用历史数据验证策略逻辑和效果</li>
+<li><strong>过拟合（Overfitting）</strong>：策略过度优化，只适合历史数据而不具备未来泛化能力</li>
+<li><strong>样本外测试（Out-of-sample）</strong>：使用未参与参数优化的数据验证策略</li>
+<li><strong>幸存者偏差（Survivorship Bias）</strong>：只使用当前仍存在的标的数据回测，导致结果虚高</li>
+<li><strong>前视偏差（Look-ahead Bias）</strong>：回测中误用了当时不可得的未来信息</li>
+<li><strong>交易成本</strong>：回测中常被低估的实际成本，包括手续费、滑点和冲击成本</li>
+</ul>
+<hr>
+<p><strong>风险控制与资金管理</strong></p>
+<ul>
+<li><strong>仓位（Position）</strong>：在某一标的上的投资资金占总资金的比例</li>
+<li><strong>满仓&#x2F;半仓&#x2F;空仓</strong>：满仓表示资金全部投入；半仓保留部分现金；空仓无持仓</li>
+<li><strong>止损&#x2F;止盈（Stop Loss&#x2F;Take Profit）</strong>：止损用于控制亏损，止盈用于锁定收益</li>
+<li><strong>换手率（Turnover）</strong>：单位时间内资产的交易频率。</li>
+<li><strong>风险预算（Risk Budgeting）</strong>：为不同资产或策略分配可承受的风险额度</li>
+<li><strong>VaR&#x2F;CVaR</strong>：VaR为一定置信度下的最大可能损失；CVaR为超过VaR的极端损失平均值</li>
+<li><strong>杠杆（Leverage）</strong>：通过借入资金或衍生品放大投资头寸，从而同步放大收益与风险</li>
+<li><strong>分散化（Diversification）</strong>：通过投资不同资产降低整体风险</li>
+</ul>
+<hr>
+<p><strong>基准与绩效评估</strong></p>
+<ul>
+<li><strong>基准（Benchmark）</strong>：用于对比策略表现的参考标准，如沪深300、中证500</li>
+<li><strong>Alpha（α）</strong>：策略相对于基准的超额收益，是主动管理的核心目标</li>
+<li><strong>Beta（β）</strong>：策略收益对基准收益波动的敏感度，衡量市场风险暴露</li>
+<li><strong>跟踪误差（Tracking Error）</strong>：策略收益与基准收益差异的波动率</li>
+<li><strong>最大回撤期（Max Drawdown Duration）</strong>：从回撤开始到恢复新高所需的最长时间</li>
+</ul>
+<hr>
+<p><strong>信号与执行</strong></p>
+<ul>
+<li><strong>信号（Signal）</strong>：指示买卖方向、时机或数量的量化信息</li>
+<li><strong>执行（Execution）</strong>：将交易指令转化为实际成交的过程</li>
+<li><strong>市价单&#x2F;限价单</strong>：市价单保证成交但不保证价格；限价单保证价格但不保证成交</li>
+<li><strong>算法交易（Algorithmic Trading）</strong>：使用程序自动拆分和执行大额订单以降低冲击成本</li>
+<li><strong>执行落差（Implementation Shortfall）</strong>：策略理论收益与实际执行收益的差距</li>
+</ul>
+<hr>
+<p><strong>市场与参与者</strong></p>
+<ul>
+<li><strong>一级&#x2F;二级市场</strong>：一级市场是发行市场；二级市场是流通交易市场</li>
+<li><strong>交易所&#x2F;场外市场</strong>：交易所是集中竞价场所；场外市场是双边协商交易</li>
+<li><strong>机构投资者&#x2F;散户</strong>：机构是专业投资者；散户是个人投资者</li>
+<li><strong>量化基金&#x2F;对冲基金</strong>：主要使用量化方法的投资机构</li>
+<li><strong>自营交易公司</strong>：使用自有资金进行交易的公司</li>
+<li><strong>养老金&#x2F;保险资金</strong>：长期机构投资者，追求稳健收益</li>
+</ul>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2025 Akane4444の 喵喵屋
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Akane4444
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+    <div>
+        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+        <script>
+            var now = new Date(); 
+            function createtime() { 
+                var grt= new Date("05/10/2024 00:00:00");//在此处修改你的建站时间
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒   "; 
+            } 
+        setInterval("createtime()",250);
+        </script>
+        <span id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>          
+        </div>  
+        
+        
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo="Akane4444hyh/Akane4444hyh.github.io"
+    data-repo-id="R_kgDOL2-34w"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOL2-3484CfTIx"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="https://static-argvchs.netlify.app/css/giscus.css"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+    
+</body>
+</html>
