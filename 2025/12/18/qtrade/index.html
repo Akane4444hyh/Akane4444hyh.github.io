@@ -213,6 +213,10 @@
 </li>
 </ul>
 </li>
+<li><a href="#1219">12.19</a><ul>
+<li><a href="#emspemsp%E6%A8%A1%E6%8B%9F%E7%BB%83%E4%B9%A0%E5%9D%87%E7%BA%BFrsi%E7%AD%96%E7%95%A5%E5%9B%9E%E6%B5%8B">&emsp;&emsp;模拟练习（均线+RSI策略回测）</a></li>
+</ul>
+</li>
 </ul>
 <!-- tocstop -->
 
@@ -373,7 +377,208 @@
 <li><strong>自營交易公司</strong>：使用自有資金進行交易的公司</li>
 <li><strong>養老金&#x2F;保險資金</strong>：長期機構投資者，追求穩健收益</li>
 </ul>
+<h1><span id="1219">12.19</span></h1><h2><span id="emspemsp模拟练习均线rsi策略回测">&emsp;&emsp;模拟练习（均线+RSI策略回测）</span></h2><pre><code>import akshare as ak
+import pandas as pd
+import matplotlib.pyplot as plt
 
+# -------------------------------
+# 1. 获取数据（贵州茅台）
+# -------------------------------
+df = ak.stock_zh_a_hist(symbol=&quot;600519&quot;, period=&quot;daily&quot;,
+                        start_date=&quot;20210101&quot;, end_date=&quot;20251130&quot;,
+                        adjust=&quot;qfq&quot;)
+
+df[&#39;日期&#39;] = pd.to_datetime(df[&#39;日期&#39;])
+df.set_index(&#39;日期&#39;, inplace=True)
+df.sort_index(inplace=True)
+
+# -------------------------------
+# 2. 均线计算
+# -------------------------------
+df[&#39;MA10&#39;] = df[&#39;收盘&#39;].rolling(10).mean()
+df[&#39;MA60&#39;] = df[&#39;收盘&#39;].rolling(60).mean()
+
+# -------------------------------
+# 3. RSI 指标计算
+# -------------------------------
+def rsi(prices, period=14):
+    delta = prices.diff()
+    gain = delta.clip(lower=0)
+    loss = -delta.clip(upper=0)
+    avg_gain = gain.rolling(period).mean()
+    avg_loss = loss.rolling(period).mean()
+    rs = avg_gain / avg_loss
+    return 100 - 100 / (1 + rs)
+
+df[&#39;RSI&#39;] = rsi(df[&#39;收盘&#39;])
+
+# -------------------------------
+# 4. 数据清洗
+# -------------------------------
+df = df[df[&#39;收盘&#39;] &gt; 0]
+df = df.dropna(subset=[&#39;MA10&#39;, &#39;MA60&#39;, &#39;RSI&#39;])
+
+# -------------------------------
+# 5. 生成交易信号
+# -------------------------------
+# 先生成原始信号（基于当天收盘后的数据）
+df[&#39;Signal_Raw&#39;] = 0
+
+# 买入条件：MA10&gt;MA60 且 RSI&lt;30
+# 趋势向上（短期均线在长期均线上方）且超卖（RSI低于30）
+df.loc[(df[&#39;MA10&#39;] &gt; df[&#39;MA60&#39;]) &amp; (df[&#39;RSI&#39;] &lt; 30), &#39;Signal_Raw&#39;] = 1
+
+# 卖出条件：MA10&lt;MA60 或 RSI&gt;70
+# 趋势向下或超买，认为应该卖出
+df.loc[(df[&#39;MA10&#39;] &lt; df[&#39;MA60&#39;]) | (df[&#39;RSI&#39;] &gt; 70), &#39;Signal_Raw&#39;] = -1
+
+# 信号延迟一天执行，避免未来函数
+# 原理：今天收盘后才能计算出今天的RSI和均线
+#      所以今天的信号只能在明天执行
+#      shift(1)表示将信号向后移动一天
+# 例如：12月1日收盘后生成买入信号，12月2日才能买入
+df[&#39;Signal&#39;] = df[&#39;Signal_Raw&#39;].shift(1)
+
+# 删除Signal为NaN的第一行（因为shift后第一行没有前一天的信号）
+df = df.dropna(subset=[&#39;Signal&#39;])
+
+# -------------------------------
+# 6. 回测参数初始化
+# -------------------------------
+initial_cash = 10000  # 初始资金（单位：元），回测起始时的本金
+cash = initial_cash   # 当前现金余额，随着买卖操作动态变化
+shares = 0            # 当前持有的股票数量（股数），0表示空仓
+portfolio = []        # 每日总资产记录列表，用于绘制净值曲线和计算收益率
+buy_points = []       # 买入点记录列表，格式：[(日期, 价格), ...]，用于绘图标记
+sell_points = []      # 卖出点记录列表，格式：[(日期, 价格), ...]，用于绘图标记
+min_holding_days = 5  # 最小持仓天数，避免频繁交易（减少交易成本和噪音信号）
+holding_days = 0      # 当前持仓天数计数器，每天持仓时+1，卖出后归零
+
+# -------------------------------
+# 7. 回测循环
+# -------------------------------
+for date, row in df.iterrows():
+
+    price = row[&#39;开盘&#39;]  # 使用当天开盘价进行买卖操作
+    signal = row[&#39;Signal&#39;]  # 这是前一天收盘后生成的信号
+    
+    # 如果持仓，持仓天数 +1
+    if shares &gt; 0:
+        holding_days += 1
+
+    # ---------------------------
+    # 买入逻辑
+    # ---------------------------
+    # 条件：收到买入信号(signal=1) 且 当前空仓(shares=0)
+    if signal == 1 and shares == 0:
+        shares = cash / price  # 全仓买入，计算可买股数
+        cash = 0               # 现金置 0（全仓操作）
+        buy_points.append((date, price))  # 记录买入点，用于后续绘图
+        holding_days = 0       # 重置持仓天数计数器
+        print(f&quot;买入: &#123;date.date()&#125; @ &#123;price:.2f&#125;&quot;)
+
+    # ---------------------------
+    # 卖出逻辑（持仓超过最短周期）
+    # ---------------------------
+    # 条件：收到卖出信号 且 当前有持仓 且 持仓天数&gt;=最小持仓天数
+    # min_holding_days 用于避免频繁交易
+    elif signal == -1 and shares &gt; 0 and holding_days &gt;= min_holding_days:
+        cash = shares * price     # 卖出所有股票，更新现金
+        shares = 0                # 持仓置 0
+        sell_points.append((date, price))  # 记录卖出点
+        holding_days = 0           # 重置持仓天数
+        print(f&quot;卖出: &#123;date.date()&#125; @ &#123;price:.2f&#125;&quot;)
+
+    # ---------------------------
+    # 总资产计算
+    # ---------------------------
+    # 每天记录总资产 = 现金 + 持仓股数 × 当前价格
+    # 用于绘制净值曲线和计算收益率
+    portfolio.append(cash + shares * price)
+
+# 保存总资产曲线到DataFrame
+df[&#39;Portfolio&#39;] = portfolio
+
+# -------------------------------
+# 8. 绘图
+# -------------------------------
+plt.figure(figsize=(12, 8))
+plt.rcParams[&#39;font.sans-serif&#39;] = [&#39;Microsoft YaHei&#39;]  # 设置中文字体
+plt.rcParams[&#39;axes.unicode_minus&#39;] = False              # 负号正常显示
+
+# ---------------------------
+# 子图1：价格 + 均线 + 买卖点
+# ---------------------------
+plt.subplot(3,1,1)
+plt.plot(df.index, df[&#39;收盘&#39;], label=&#39;收盘价&#39;, linewidth=1.5)
+plt.plot(df.index, df[&#39;MA10&#39;], label=&#39;10日均线&#39;, color=&#39;orange&#39;, linewidth=1)
+plt.plot(df.index, df[&#39;MA60&#39;], label=&#39;60日均线&#39;, color=&#39;red&#39;, linewidth=1)
+# 绘制买入点（绿色向上三角形）
+if buy_points:
+    dates, prices = zip(*buy_points)
+    plt.scatter(dates, prices, marker=&#39;^&#39;, color=&#39;green&#39;, s=100, label=&#39;买入&#39;, zorder=5)
+# 绘制卖出点（红色向下三角形）
+if sell_points:
+    dates, prices = zip(*sell_points)
+    plt.scatter(dates, prices, marker=&#39;v&#39;, color=&#39;red&#39;, s=100, label=&#39;卖出&#39;, zorder=5)
+plt.title(&#39;贵州茅台&#39;)
+plt.legend()
+plt.grid(True, alpha=0.3)
+
+# ---------------------------
+# 子图2：净值对比
+# ---------------------------
+plt.subplot(3,1,2)
+# 策略净值曲线（我们的策略表现）
+plt.plot(df.index, df[&#39;Portfolio&#39;], label=&#39;策略净值&#39;, color=&#39;darkblue&#39;, linewidth=2)
+# 买入持有基准（如果一开始买入并一直持有）
+baseline = initial_cash * df[&#39;收盘&#39;] / df[&#39;收盘&#39;].iloc[0]
+plt.plot(df.index, baseline, label=&#39;买入持有&#39;, linestyle=&#39;--&#39;, color=&#39;gray&#39;, linewidth=2)
+plt.title(&#39;净值对比&#39;)
+plt.legend()
+plt.grid(True, alpha=0.3)
+
+# ---------------------------
+# 子图3：RSI指标
+# ---------------------------
+plt.subplot(3,1,3)
+plt.plot(df.index, df[&#39;RSI&#39;], label=&#39;RSI&#39;, color=&#39;purple&#39;, linewidth=1)
+# RSI超卖线（30以下认为超卖，可能反弹）
+plt.axhline(y=30, color=&#39;green&#39;, linestyle=&#39;--&#39;, alpha=0.5, label=&#39;超卖线(30)&#39;)
+# RSI超买线（70以上认为超买，可能回调）
+plt.axhline(y=70, color=&#39;red&#39;, linestyle=&#39;--&#39;, alpha=0.5, label=&#39;超买线(70)&#39;)
+plt.title(&#39;RSI指标&#39;)
+plt.legend()
+plt.grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+
+# -------------------------------
+# 9. 回测结果统计
+# -------------------------------
+final_value = df[&#39;Portfolio&#39;].iloc[-1]             # 最终总资产
+total_return = (final_value / initial_cash - 1) * 100   # 策略总收益率
+baseline_return = (df[&#39;收盘&#39;].iloc[-1] / df[&#39;收盘&#39;].iloc[0] - 1) * 100  # 买入持有收益率
+
+# 计算最大回撤
+# 最大回撤 = 从历史最高点到后续最低点的最大跌幅
+df[&#39;Cummax&#39;] = df[&#39;Portfolio&#39;].cummax()  # 累计最高净值
+df[&#39;Drawdown&#39;] = (df[&#39;Portfolio&#39;] / df[&#39;Cummax&#39;] - 1) * 100  # 每日回撤百分比
+max_drawdown = df[&#39;Drawdown&#39;].min()  # 最大回撤值（负数，越小风险越大）
+
+print(&quot;=&quot; * 60)
+print(f&quot;初始资金:        ¥&#123;initial_cash:,.0f&#125;&quot;)
+print(f&quot;最终资金:        ¥&#123;final_value:,.2f&#125;&quot;)
+print(f&quot;策略总收益率:    &#123;total_return:.2f&#125;%&quot;)
+print(f&quot;买入持有收益率:  &#123;baseline_return:.2f&#125;%&quot;)
+print(f&quot;超额收益:        &#123;total_return - baseline_return:.2f&#125;%&quot;)
+print(f&quot;最大回撤:        &#123;max_drawdown:.2f&#125;%&quot;)
+print(f&quot;交易次数:        买入&#123;len(buy_points)&#125;次, 卖出&#123;len(sell_points)&#125;次&quot;)
+print(&quot;=&quot; * 60)
+</code></pre>
+<img src="/images/qtrade/Result_1.png" alt="2" title="Rusult_1" width="400">
+<img src="/images/qtrade/Figure_1.png" alt="2" title="Figure_1" width="1200">
     </div>
     
     
