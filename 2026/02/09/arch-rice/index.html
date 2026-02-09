@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Categories: 他山之石 | Akane4444の 喵喵屋</title>
+    <title>My Arch Rice Journey | Akane4444の 喵喵屋</title>
     <meta name="author" content="Akane4444" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -42,6 +42,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -173,36 +177,20 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
-        
-        
-        
-        <span>
-            <a href="/categories/%E5%88%9D%E5%8D%87%E6%96%B0%E6%9C%88/" style="background: #dda0dd">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                初升新月
-            </a>
+            <div class="article">
+    <div>
+        <h1>My Arch Rice Journey</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/2/9
         </span>
         
-        
-        
-        <span>
-            <a href="/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/" style="background: #f87d74">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                時罅糸語
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/%E6%8A%80%E7%B6%93%E8%82%AF%E7%B6%AE/" style="background: #b399ff">
+        <span class="category">
+            <a href="/categories/%E6%8A%80%E7%B6%93%E8%82%AF%E7%B6%AE/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -211,88 +199,164 @@
         </span>
         
         
-        
-        <span>
-            <a href="/categories/%E4%BA%82%E8%AA%9E%E8%83%A1%E8%A8%80/" style="background: #dda0dd">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                亂語胡言
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/%E5%9B%9B%E6%9B%A1%E5%8D%8A%E5%86%85/" style="background: #cca3cc">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                四曡半内
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/%E4%BB%96%E5%B1%B1%E4%B9%8B%E7%9F%B3/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                他山之石
-            </a>
-        </span>
-        
-        
-        
-        
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2025/11/28</div>
-            <a href="/2025/11/28/sentence/">
-                <h3>《罪與罰》閲讀筆記</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E4%BB%96%E5%B1%B1%E4%B9%8B%E7%9F%B3/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        他山之石
-                    </a>
-                </span>
-                
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <p><strong>Device Information</strong><br>    Device: Lenovo ThinkBook 16 G7+ IAH (21TL)<br>    CPU: Intel Core Ultra 9 285Z<br>    GPU: NVIDIA GeForce RTX 5060<br>    RAM: 32 GB<br>    STORAGE: 1TB NVMe SSD (ZhiTai Ti7100)<br>    Display: 3200x2000 @ 60Hz (MNG007ZA1-4)</p>
+<h2><span id="dying-man-last-delusion">Dying man Last Delusion</span></h2><p>Nobody knows what a customized desktop means to a thirsty Narcissus.</p>
+<p>It’s not just about easily reading official Docs or writing simple Scripts,</p>
+<p>It is a countless debate with poor free LLM, endless searching for solutions for my NVIDIA 5060, and hysterically staring at dazzling screen for 15 hours until 3 a.m. just for adjusting a little button to a right place and play its own role.</p>
+<h2><span id="a-long-journey">A Long Journey</span></h2><p>Before Arch, I had some basic Linux experience.</p>
+<ul>
+<li>Tried Ubuntu in VMware</li>
+<li>Used Linux Mint for daily learning</li>
+<li>Created bootable USB with Ventoy</li>
+</ul>
+<p>Everything worked well.</p>
+<p>It felt like a perfect start.</p>
+<p>But things changed after I moved to vanilla Arch Linux</p>
+<h2><span id="installing-vanilla-arch-linux">Installing Vanilla Arch Linux</span></h2><p>I installed Arch Linux using Ventoy and the official ISO.</p>
+<h3><span id="basic-setup">Basic Setup</span></h3><p>a.Connect to the internet using <code>iwd</code></p>
+<p>b.Enable time synchronization using <code>timedatectl</code></p>
+<pre><code class="bash">timedatectl set-ntp true
+</code></pre>
+<p>c.Configure mirrors using <code>reflector</code> and <code>archlinux-keyring</code></p>
+<p>d.Create partitions using GPT and <code>cfdisk</code> :</p>
+<pre><code class="bash">lsblk -f
+</code></pre>
+<p>find the prepared disk space </p>
+<table>
+<thead>
+<tr>
+<th>Partition</th>
+<th>Type</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>EFI</td>
+<td>ESP</td>
+<td>512M</td>
+</tr>
+<tr>
+<td>Swap</td>
+<td>Swap</td>
+<td>16G</td>
+</tr>
+<tr>
+<td>Root</td>
+<td>Btrfs</td>
+<td>Remaining</td>
+</tr>
+</tbody></table>
+<p>e. Formatting</p>
+<pre><code class="bash">mkfs.fat -F32 /dev/nvme0n1p1
+mkswap /dev/nvme0n1p3
+swapon /dev/nvme0n1p3
+mkfs.btrfs /dev/nvme0n1p2
+</code></pre>
+<p>f. Btrfs Subvolumes<br>Create subvolumes(mount temporarily)</p>
+<pre><code class="bash">mount /dev/nvme0n1p2 /mnt 
+btrfs subvolume create /mnt/@ 
+btrfs subvolume create /mnt/@home 
+umount /mnt
+</code></pre>
+<p>Mount subvolumes and EFI</p>
+<pre><code class="bash">mount -t btrfs -o subvol=@,compress=zstd /dev/nvme0n1p2 /mnt 
+mkdir /mnt/home 
+mount -t btrfs -o subvol=@home,compress=zstd /dev/nvme0n1p2 /mnt/home 
+mkdir -p /mnt/efi 
+mount /dev/nvme0n1p1 /mnt/efi 
+</code></pre>
+<h3><span id="install-base-system">Install Base System</span></h3><p>a.Install necessary</p>
+<pre><code class="bash">pacstrap -K /mnt base base-devel linux-zen linux-firmware btrfs-progs vim networkmanager sudo intel-ucode
+</code></pre>
+<p>b.Generate <code>fstab</code></p>
+<pre><code class="bash">genfstab -U /mnt &gt; /mnt/etc/fstab
+</code></pre>
+<p>c.CHROOT!!!!!</p>
+<pre><code class="bash">arch-chroot /mnt
+</code></pre>
+<p>Enable network service:</p>
+<pre><code class="bash">systemctl enable NetworkManager
+</code></pre>
+<p>c1.Configure timezone using <code>timedatectl</code> </p>
+<pre><code class="bash">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+hwclock --systohc
+</code></pre>
+<p>c2.Localize</p>
+<pre><code class="bash">vim /etc/locale.gen
+</code></pre>
+<p>uncomment en_US UTF-8</p>
+<pre><code class="bash">locale-gen
+</code></pre>
+<pre><code class="bash">vim /etc/locale.conf
+</code></pre>
+<p>write:”LANG&#x3D;en_US.UTF-8”</p>
+<p>c3.Hostname</p>
+<pre><code class="bash">vim /etc/hostname
+</code></pre>
+<p>write: hostname-you-like</p>
+<p>c4.Root<br>set root passwd</p>
+<pre><code class="bash">passwd
+</code></pre>
+<p>c5.Install <code>grub</code> and <code>efibootmgr</code></p>
+<pre><code class="bash">pacman -S grub efibootmgr
+</code></pre>
+<p>(Since customized the EFI mount point)</p>
+<pre><code class="bash">grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=name-you-like
+</code></pre>
+<pre><code class="bash">grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+<p>c6.If dual-boot System</p>
+<pre><code class="bash">pacman -S os-prober exfat-utils
+</code></pre>
+<p>edit &#x2F;etc&#x2F;default&#x2F;grub<br>uncomment the line has “os-prober”</p>
+<pre><code class="bash">grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+<p>REBOOT!!!!</p>
+<p>change boot options</p>
+<p>–</p>
+<p><strong>the first problem</strong></p>
+<p><strong>Issue</strong>: black screen after enter grub</p>
+<p><strong>Cause</strong>: <code>nouveau</code> not supporting NVIDIA 5060</p>
+<p><strong>Solution</strong>: add “nouveau.modeset&#x3D;0 nvidia-drm.modeset&#x3D;1” to “GRUB_CMDLINE_LINUX_DEFAULT” in &#x2F;etc&#x2F;default&#x2F;grub </p>
+<p>–</p>
+<h3><span id="initial-config">Initial Config</span></h3><pre><code class="bash">pacman -Syu
+</code></pre>
+<p>a.Add regular user</p>
+<pre><code class="bash">useradd -mG wheel username-you-like
+passwd username-you-like
+</code></pre>
+<pre><code class="bash">visudo
+</code></pre>
+<p>uncomment %wheel All&#x3D;…</p>
+<p>b.Install snapper</p>
+<pre><code class="bash">pacman -S snapper snap-pac grub-btrfs inotify-tools
+systemctl enable --now grub-btrfs
+</code></pre>
+<p>REBOOT!!!!<br>config</p>
+<pre><code class="bash">snapper -c root create-config /
+snapper -c home create-config /home
+</code></pre>
+<pre><code class="bash">grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+<p>c. install <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/NVIDIA">NVIDIA dirver</a></p>
+<p>d. Install KDE Plasma and configure Niri for Wayland session</p>
+<h2><span id="uninstall-arch">Uninstall arch</span></h2><p>???</p>
+<h2><span id="garuda-mokka">Garuda Mokka</span></h2><p>???</p>
+
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2024/6/2</div>
-            <a href="/2024/06/02/yannv/">
-                <h3>《厭女》：厭女症與女性主義</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E4%BB%96%E5%B1%B1%E4%B9%8B%E7%9F%B3/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        他山之石
-                    </a>
-                </span>
-                
-                
-            </div>
-        </div>
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
     </div>
+    
+    
+    
     
 </div>
 
@@ -349,6 +413,29 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo="Akane4444hyh/Akane4444hyh.github.io"
+    data-repo-id="R_kgDOL2-34w"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOL2-3484CfTIx"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="https://static-argvchs.netlify.app/css/giscus.css"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
     
 </body>
 </html>
