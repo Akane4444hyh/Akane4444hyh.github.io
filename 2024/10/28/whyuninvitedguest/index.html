@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Why does it have to be the Uninvited Guest? 爲什麽是不速之客？ | Akane4444の 喵喵屋</title>
+    <meta name="author" content="Akane4444" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avater2.png" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="preconnect" href="https://static-argvchs.netlify.app" />
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Akane4444の 喵喵屋" type="application/atom+xml">
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>Tips:多按F5喵（圖片加載慢慢）</p>
+                    <p>     使用魔法會更快喵</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>AKANE4444の 喵喵屋</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;主頁</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;關於我</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;歸檔</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分類</span>
+        </a>
+        
+        <a href="/comment">
+            <i class="fa-solid fa-comment fa-fw"></i>
+            <span>&ensp;討論區</span>
+        </a>
+        
+        <a href="/atom.xml">
+            <i class="fa-solid fa-square-rss fa-fw"></i>
+            <span>&ensp;RSS</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;AKANE4444の 喵喵屋</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">主頁</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">關於我</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">歸檔</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">分類</div>
+                    </div>
+                </a>
+                
+                <a href="/comment">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-comment fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">討論區</div>
+                    </div>
+                </a>
+                
+                <a href="/atom.xml">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-square-rss fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">RSS</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>Why does it have to be the Uninvited Guest? 爲什麽是不速之客？</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/28
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E5%9B%9B%E6%9B%A1%E5%8D%8A%E5%86%85/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                四曡半内
+            </a>
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>Why does it have to be the Uninvited Guest? After experiencing it from the character’s perspective, just like other Otaku, on 5th Sept., I had a restless night.<span id="more"></span></p>
+<h3><span id="why-does-it-have-to-be-the-uninvited-guest">Why does it have to be the Uninvited Guest?</span></h3><p>    ‘Why does it have to be the Uninvited Guest?’ When asking one friend of mine, I just couldn’t understand. What he said was that the ending was too sad for him to bear, but I just wanted to ask, ‘Why does it have to be the Uninvited Guest?’<br><img src="/images/egumi/d.png" alt="2" title="d" width="800"><br>    Two years ago, I casually found a comment from Diana on Bilibili: “I don’t mean I hate the one who pays off for his hard work, but the one who is always the lucky dog.” A hero may believe himself a hero; however, too many silly fish think the same way. The probability of clichés happening may go against the grain, just like having two people in a class share the same birthday, which，however， never included me. So I ask, ‘Why does it have to be the Uninvited Guest?’ I, who could never become ‘the Uninvited Guest’ , know it would be fruitless. I just follow what a common villager does: expecting one day I would be asked, ‘Why does it have to be you?’</p>
+<p>    Offering incense to the Buddha, and the Buddha grants blessings, for there are always those lucky enough to make their dreams come true. What the Otaku who wouldn’t burn incense dare not do is not accept unlucky reality in <em><strong>Sonny Boy</strong></em>, but to enhance the illusory. If asked about ‘The Experience Machine’ of Robert Nozick, Otaku may say, “Please be sure to give me that.” But when the button really appears in their lives, it’s difficult to have the courage to enhance the illusory. I guess almost nobody survives after realizing the fact that they were in a fake world. But Boom did it; he said he wanted to tear the sky, so he did it.<br><img src="/images/egumi/c.png" alt="2" title="c" width="1000"><br>    It’s pretty unfair, for I am not lucky, nor am I Boom, unable to lick End and unable to cover reality with the illusory. Bored Otaku always imagine either odd happenings in the news or fabulous stories in Tieba. So it may be a good idea to escape from the hustle and bustle to narrow lanes and wide avenues; perhaps one can <em><strong>ひげを剃る。そして女子高生を拾う</strong></em>(www)<br>    Once in <a target="_blank" rel="noopener" href="https://www.ted.com/talks/kohei_momose">Ted</a>, I found a similar topic about others’ luck and one’s own luck. In his speech, Kohei Momose mentioned that people in modern society crave uniqueness, often with external factors dominating while internal aspects are overlooked. External traumas may not be comparable, but it is the internal that serves as the basis for determining individuality. The common villagers lack both external and internal uniqueness in the story, yet they try to entrust dreams and existence to luck. And that’s why we are asking, ‘Why does it have to be the Uninvited Guest?’</p>
+<p>    The first ‘Boom’ was not Boom, but the uncommon villager in Episode One.<br><img src="/images/egumi/b.png" alt="2" title="b" width="800"><br>    I guess the most exquisite aspect of the ‘sense of happiness’ lies in the word ‘sense.’ The Uninvited Guest is undoubtedly happy because he possesses better luck than anyone else. While Boom and the uncommon villager share a sense of happiness because they embrace the fancy. However, common villagers and I are certainly unhappy, as we still find ourselves asking, ‘Why does it have to be the Uninvited Guest?’</p>
+<p>pictures from <em><strong>Egumi Legacy</strong></em><br>&emsp;&emsp;<br>&emsp;&emsp;<br>&emsp;&emsp;</p>
+<hr>
+<p>&emsp;&emsp;<br>&emsp;&emsp;<br>&emsp;&emsp;</p>
+<p>&emsp;&emsp;爲什麽是不速之客?狠狠帶入之后，我像看完了的大多數宅宅一樣，在9月25日的晚上，睡不着了。</p>
+<h3><span id="爲什麽是不速之客">爲什麽是不速之客？</span></h3><p>&emsp;&emsp;‘爲什麽是不速之客?’我很想問。推給同學，同學説這部的結局太悲傷了。我不理解，我只是想問“爲什麽是不速之客”<br><img src="/images/egumi/d.png" alt="2" title="d" width="800"><br>&emsp;&emsp;兩年前，在嘉然小姐的評論區偶然看到：‘我不討厭天道酬勤，但討厭別人的好運——只是因爲我沒有好運罷了’。勇者或許堅信自己是勇者，不過，大多魔王刀下的雜魚也是這樣想的。<!-- more -->俗套的偶然發生的概率大的，就像一個班相同生日的兩個人，不過這兩個人中總沒有我的份，於是我發問‘爲什麽是不速之客?’，成爲不了不速之客的我知道，發問也是沒用。我只是想做普通村民該做的事罷：期待總有一天也能聽到‘爲什麽是你’。<br>&emsp;&emsp;燒香求佛，佛祖很靈，因爲拜的人多，總有人願望成真。不會燒香拜佛的宅宅不敢做的事，不是《漂流少年》中的接受不幸的現實，而是擁抱可以觸摸到的幻想。如果參與Robert Nozick 的「經驗機器」的思想實驗，宅宅們或許會說：請務必給我這種機器，可是儅現實真正出現這種選項的時候，擁抱幻想的勇氣太難了，我想，大概認識到幸福的自己若是應爲大腦上插滿電極片的幻想，很難的吧，但是炸彈做到了，他説他想撕裂天空，於是他撕裂了天空。<br><img src="/images/egumi/c.png" alt="2" title="c" width="1000"><br>&emsp;&emsp;這是不公平的，因爲我既沒有好運，也不是撕裂惡魔，不能舔冰淇凌，不能將幻想覆蓋現實。無論是神貼中奇妙的現實，抑或是魔幻的新聞，無聊的宅宅總會幻想的罷，所以，大可以凌晨溜出家門，在有人或是無人的街上逛一逛，説不定就能《剃鬚，然後撿到女高中生》（笑）。</p>
+<p>&emsp;&emsp;之前在<a target="_blank" rel="noopener" href="https://www.ted.com/talks/kohei_momose">Ted演講</a>上看到類似的問題，如何面對別人的好運和自己的不幸，演講中，桃賴康平提到了現代社會的人渴望特殊性，往往外在占據主導和内在卻被忽視，外在的創傷或許不能望其項背，内在才是判斷唯一性的依據。不是主角的村民在劇中似乎沒有外在的，也沒有内在的特殊性，但卻在追求末日的飯圈中試圖將外在的幸運唯一的夢想，這也難怪爲什麽我們在問“爲什麽是不速之客”了。</p>
+<p>&emsp;&emsp;第一個“炸彈”其實不是炸彈，而是第一集作爲伏筆甜歌姬的不普通村民。<br><img src="/images/egumi/b.png" alt="2" title="b" width="800"><br>&emsp;&emsp;我想，‘幸福感’這個詞最精妙的就在這個‘感’字。不速之客無疑是幸福的，因爲他有別人沒有的好運；炸彈和那個不普通的村民擁有幸福感的，因爲他認可了獨一無二的幻想；但和我一樣的普通村民大概是不幸福的，因爲我們還在問‘爲什麽是不速之客?’</p>
+<p>圖片來源於<em><strong>Egumi Legacy</strong></em><br>好難，用chatgpt修改了下英文語法錯誤，<br><img src="/images/egumi/aaa.png" alt="2" title="404" width="444"></p>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 Akane4444の 喵喵屋
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Akane4444
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+    <div>
+        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+        <script>
+            var now = new Date(); 
+            function createtime() { 
+                var grt= new Date("05/10/2024 00:00:00");//在此处修改你的建站时间
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒   "; 
+            } 
+        setInterval("createtime()",250);
+        </script>
+        <span id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>          
+        </div>  
+        
+        
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo="Akane4444hyh/Akane4444hyh.github.io"
+    data-repo-id="R_kgDOL2-34w"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOL2-3484CfTIx"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="https://static-argvchs.netlify.app/css/giscus.css"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+    
+</body>
+</html>

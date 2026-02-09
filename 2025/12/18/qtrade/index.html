@@ -1,0 +1,674 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>量化交易筆記 | Akane4444の 喵喵屋</title>
+    <meta name="author" content="Akane4444" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avater2.png" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="preconnect" href="https://static-argvchs.netlify.app" />
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Akane4444の 喵喵屋" type="application/atom+xml">
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>Tips:多按F5喵（圖片加載慢慢）</p>
+                    <p>     使用魔法會更快喵</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>AKANE4444の 喵喵屋</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;主頁</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;關於我</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;歸檔</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分類</span>
+        </a>
+        
+        <a href="/comment">
+            <i class="fa-solid fa-comment fa-fw"></i>
+            <span>&ensp;討論區</span>
+        </a>
+        
+        <a href="/atom.xml">
+            <i class="fa-solid fa-square-rss fa-fw"></i>
+            <span>&ensp;RSS</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;AKANE4444の 喵喵屋</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">主頁</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">關於我</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">歸檔</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">分類</div>
+                    </div>
+                </a>
+                
+                <a href="/comment">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-comment fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">討論區</div>
+                    </div>
+                </a>
+                
+                <a href="/atom.xml">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-square-rss fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">RSS</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>量化交易筆記</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/12/18
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%8A%80%E7%B6%93%E8%82%AF%E7%B6%AE/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                技經肯綮
+            </a>
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>本文章將記錄本人從2025年12月18日開始的量化交易學習記錄</p>
+<!-- toc -->
+
+<ul>
+<li><a href="#1218">12.18</a><ul>
+<li><a href="#emspemsp%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E5%AD%B8%E7%BF%92%E5%B0%8E%E5%9C%96">&emsp;&emsp;量化交易學習導圖</a><ul>
+<li><a href="#emspemsp%E8%A9%B1%E8%A1%93%E5%96%B5%CF%89~">&emsp;&emsp;話術喵(^ω^)~</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#1219">12.19</a><ul>
+<li><a href="#emspemsp%E6%A8%A1%E6%8B%9F%E7%BB%83%E4%B9%A0%E5%9D%87%E7%BA%BFrsi%E7%AD%96%E7%95%A5%E5%9B%9E%E6%B5%8B">&emsp;&emsp;模拟练习（均线+RSI策略回测）</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<span id="more"></span>
+
+<hr>
+<h1><span id="1218">12.18</span></h1><h2><span id="emspemsp量化交易學習導圖">&emsp;&emsp;量化交易學習導圖</span></h2><ul>
+<li><p><strong>金融基礎</strong></p>
+<ul>
+<li>股票 &#x2F; 債券 &#x2F; 現金</li>
+<li>市場機制</li>
+<li>風險 &#x2F; 回撤</li>
+<li>交易常識（手續費、滑點）</li>
+<li>衍生品（期權、期貨）</li>
+<li>基本面 vs 技術面</li>
+<li>投資心理 &#x2F; 行爲金融</li>
+</ul>
+</li>
+<li><p><strong>編程基礎</strong></p>
+<ul>
+<li>Python</li>
+<li>Numpy &#x2F; Pandas</li>
+<li>Matplotlib &#x2F; Seaborn（可視化）</li>
+<li>Jupyter Notebook（交互實驗）</li>
+<li>回測庫（TA-Lib, bt, backtrader）</li>
+</ul>
+</li>
+<li><p><strong>數學與統計</strong></p>
+<ul>
+<li>線性代數</li>
+<li>概率論</li>
+<li>統計思維</li>
+<li>回歸分析 &#x2F; 因子模型</li>
+<li>時間序列分析（均值回歸、ARMA&#x2F;ARIMA）</li>
+</ul>
+</li>
+<li><p><strong>數據與策略</strong></p>
+<ul>
+<li>數據獲取</li>
+<li>歷史行情數據</li>
+<li>API（Tushare, yfinance）</li>
+<li>數據清洗與處理</li>
+<li>策略思想</li>
+<li>均線策略</li>
+<li>動量 &#x2F; 均值回歸</li>
+<li>因子策略</li>
+<li>事件驅動策略</li>
+<li>套利策略</li>
+<li>回測分析</li>
+<li>收益率</li>
+<li>最大回撤</li>
+<li>夏普比率 &#x2F; 信息比率</li>
+<li>勝率 &#x2F; 盈虧比</li>
+<li>交易成本敏感性分析</li>
+</ul>
+</li>
+<li><p><strong>風險控制</strong></p>
+<ul>
+<li>倉位管理（不滿倉、風險預算）</li>
+<li>止損止盈（控制虧損）</li>
+<li>風險指標（VaR、CVaR、多策略組合）</li>
+</ul>
+</li>
+<li><p><strong>實盤與反思</strong></p>
+<ul>
+<li>模擬盤</li>
+<li>復盤</li>
+<li>記錄（策略參數、市場情況、情緒、回測 vs 實盤偏差）</li>
+</ul>
+</li>
+</ul>
+<p>&emsp;&emsp;量化交易平臺:Joinquant，ricequant ; quantconnected<br>&emsp;&emsp;<br>&emsp;&emsp;</p>
+<h3><span id="emspemsp話術喵ω~">&emsp;&emsp;話術喵(^ω^)~</span></h3><p><strong>交易與市場基礎</strong></p>
+<ul>
+<li><strong>標的資產（Asset）</strong>：實際交易的對象，如股票、ETF、期貨、期權</li>
+<li><strong>多頭&#x2F;空頭（Long&#x2F;Short）</strong>：多頭是先買後賣期待上漲；空頭是先賣後買期待下跌（在A股，個人投資者通常需通過融券、股指期貨等工具實現）</li>
+<li><strong>成交價&#x2F;開盤價&#x2F;收盤價</strong>：成交價：某一筆交易實際發生的價格；開盤價：當日第一筆成交價格，反映隔夜信息的集中釋放；收盤價：在連續競價市場（如A股），通常指收盤集合競價產生的價格。因其避免尾盤操縱、穩定可復現，是量化研究中最常用的基準價格。</li>
+<li><strong>滑點（Slippage）</strong>：預期成交價與實際成交價的差額，常由市場波動、流動性不足或訂單規模導致</li>
+<li><strong>衝擊成本（Impact Cost）</strong>：大額訂單本身對市場價格產生的不利影響，是滑點的主要來源之一</li>
+<li><strong>手續費（Commission）</strong>：每次交易產生的固定或按比例收取的成本，高頻策略必須重點考慮</li>
+<li><strong>流動性（Liquidity）</strong>：資產是否能被快速、低成本地買賣成交</li>
+<li><strong>成交量&#x2F;成交額（Volume&#x2F;Turnover）</strong>：成交量指成交的股數&#x2F;手數；成交額指成交的金額，反映市場活躍度（另見“換手率”）</li>
+<li><strong>盤口&#x2F;訂單簿（Order Book）</strong>：顯示當前買賣掛單價格和數量的實時列表</li>
+<li><strong>最小變動單位（Tick Size）</strong>：價格變動的最小單位，如A股爲0.01元</li>
+<li><strong>做市商（Market Maker）</strong>：提供雙向報價，爲市場提供流動性的機構</li>
+</ul>
+<hr>
+<p><strong>收益與風險指標</strong></p>
+<ul>
+<li><strong>收益率（Return）</strong>：投資盈利的比例，可分爲絕對收益和相對收益</li>
+<li><strong>回撤（Drawdown）</strong>：從歷史最高點到後續最低點的跌幅；最大回撤表示歷史最慘的一次虧損</li>
+<li><strong>波動率（Volatility）</strong>：收益率波動的標準差，是衡量價格不確定性的核心風險指標</li>
+<li><strong>夏普比率（Sharpe Ratio）</strong>：每承擔一單位總風險獲得的超額收益，越高說明風險調整後收益越好</li>
+<li><strong>信息比率（Information Ratio）</strong>：超額收益與跟蹤誤差的比值，衡量單位主動風險所帶來的超額收益，用於評估主動管理能力的效率與穩定性</li>
+<li><strong>年化收益&#x2F;年化波動率</strong>：將不同周期數據標準化爲年率，便於策略橫向比較</li>
+<li><strong>索提諾比率（Sortino Ratio）</strong>：類似夏普比率，但只考慮下行風險</li>
+</ul>
+<hr>
+<p><strong>策略思想與類型</strong></p>
+<ul>
+<li><strong>基本面分析（Fundamental）</strong>：研究公司內在價值，如財務數據、行業地位、管理團隊</li>
+<li><strong>技術分析（Technical）</strong>：基於價格、成交量等市場數據進行分析，如K線、均線、指標</li>
+<li><strong>因子（Factor）</strong>：可解釋股票收益的特徵變量，如價值、規模、動量、質量因子</li>
+<li><strong>動量（Momentum）</strong>：漲得多的資產可能繼續上漲，跌得多的可能繼續下跌</li>
+<li><strong>均值回歸（Mean Reversion）</strong>：價格偏離其長期均值後會回歸到平均水平</li>
+<li><strong>事件驅動（Event Driven）</strong>：利用財報發布、並購公告、政策變化等事件進行交易</li>
+<li><strong>市場中性（Market Neutral）</strong>：通過同時構建多空頭寸對衝市場方向性風險</li>
+<li><strong>統計套利（Statistical Arbitrage）</strong>：基於資產價格間長期存在的穩定統計關系（如協整、價差均值回歸） 進行交易。當價差偏離時構建多空組合，期待其回歸並獲利。</li>
+<li><strong>高頻交易（HFT）</strong>：利用極短時間內的市場微觀結構進行交易</li>
+</ul>
+<hr>
+<p><strong>回測與驗證</strong></p>
+<ul>
+<li><strong>回測（Backtest）</strong>：使用歷史數據驗證策略邏輯和效果</li>
+<li><strong>過擬合（Overfitting）</strong>：策略過度優化，只適合歷史數據而不具備未來泛化能力</li>
+<li><strong>樣本外測試（Out-of-sample）</strong>：使用未參與參數優化的數據驗證策略</li>
+<li><strong>幸存者偏差（Survivorship Bias）</strong>：只使用當前仍存在的標的數據回測，導致結果虛高</li>
+<li><strong>前視偏差（Look-ahead Bias）</strong>：回測中誤用了當時不可得的未來信息</li>
+<li><strong>交易成本</strong>：回測中常被低估的實際成本，包括手續費、滑點和衝擊成本</li>
+</ul>
+<hr>
+<p><strong>風險控制與資金管理</strong></p>
+<ul>
+<li><strong>倉位（Position）</strong>：在某一標的上的投資資金佔總資金的比例</li>
+<li><strong>滿倉&#x2F;半倉&#x2F;空倉</strong>：滿倉表示資金全部投入；半倉保留部分現金；空倉無持倉</li>
+<li><strong>止損&#x2F;止盈（Stop Loss&#x2F;Take Profit）</strong>：止損用於控制虧損，止盈用於鎖定收益</li>
+<li><strong>換手率（Turnover）</strong>：單位時間內資產的交易頻率。</li>
+<li><strong>風險預算（Risk Budgeting）</strong>：爲不同資產或策略分配可承受的風險額度</li>
+<li><strong>VaR&#x2F;CVaR</strong>：VaR爲一定置信度下的最大可能損失；CVaR爲超過VaR的極端損失平均值</li>
+<li><strong>槓杆（Leverage）</strong>：通過借入資金或衍生品放大投資頭寸，從而同步放大收益與風險</li>
+<li><strong>分散化（Diversification）</strong>：通過投資不同資產降低整體風險</li>
+</ul>
+<hr>
+<p><strong>基準與績效評估</strong></p>
+<ul>
+<li><strong>基準（Benchmark）</strong>：用於對比策略表現的參考標準，如滬深300、中證500</li>
+<li><strong>Alpha（α）</strong>：策略相對於基準的超額收益，是主動管理的核心目標</li>
+<li><strong>Beta（β）</strong>：策略收益對基準收益波動的敏感度，衡量市場風險暴露</li>
+<li><strong>跟蹤誤差（Tracking Error）</strong>：策略收益與基準收益差異的波動率</li>
+<li><strong>最大回撤期（Max Drawdown Duration）</strong>：從回撤開始到恢復新高所需的最長時間</li>
+</ul>
+<hr>
+<p><strong>信號與執行</strong></p>
+<ul>
+<li><strong>信號（Signal）</strong>：指示買賣方向、時機或數量的量化信息</li>
+<li><strong>執行（Execution）</strong>：將交易指令轉化爲實際成交的過程</li>
+<li><strong>市價單&#x2F;限價單</strong>：市價單保證成交但不保證價格；限價單保證價格但不保證成交</li>
+<li><strong>算法交易（Algorithmic Trading）</strong>：使用程序自動拆分和執行大額訂單以降低衝擊成本</li>
+<li><strong>執行落差（Implementation Shortfall）</strong>：策略理論收益與實際執行收益的差距</li>
+</ul>
+<hr>
+<p><strong>市場與參與者</strong></p>
+<ul>
+<li><strong>一級&#x2F;二級市場</strong>：一級市場是發行市場；二級市場是流通交易市場</li>
+<li><strong>交易所&#x2F;場外市場</strong>：交易所是集中競價場所；場外市場是雙邊協商交易</li>
+<li><strong>機構投資者&#x2F;散戶</strong>：機構是專業投資者；散戶是個人投資者</li>
+<li><strong>量化基金&#x2F;對衝基金</strong>：主要使用量化方法的投資機構</li>
+<li><strong>自營交易公司</strong>：使用自有資金進行交易的公司</li>
+<li><strong>養老金&#x2F;保險資金</strong>：長期機構投資者，追求穩健收益</li>
+</ul>
+<h1><span id="1219">12.19</span></h1><h2><span id="emspemsp模拟练习均线rsi策略回测">&emsp;&emsp;模拟练习（均线+RSI策略回测）</span></h2><pre><code>import akshare as ak
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# -------------------------------
+# 1. 获取数据（贵州茅台）
+# -------------------------------
+df = ak.stock_zh_a_hist(symbol=&quot;600519&quot;, period=&quot;daily&quot;,
+                        start_date=&quot;20210101&quot;, end_date=&quot;20251130&quot;,
+                        adjust=&quot;qfq&quot;)
+
+df[&#39;日期&#39;] = pd.to_datetime(df[&#39;日期&#39;])
+df.set_index(&#39;日期&#39;, inplace=True)
+df.sort_index(inplace=True)
+
+# -------------------------------
+# 2. 均线计算
+# -------------------------------
+df[&#39;MA10&#39;] = df[&#39;收盘&#39;].rolling(10).mean()
+df[&#39;MA60&#39;] = df[&#39;收盘&#39;].rolling(60).mean()
+
+# -------------------------------
+# 3. RSI 指标计算
+# -------------------------------
+def rsi(prices, period=14):
+    delta = prices.diff()
+    gain = delta.clip(lower=0)
+    loss = -delta.clip(upper=0)
+    avg_gain = gain.rolling(period).mean()
+    avg_loss = loss.rolling(period).mean()
+    rs = avg_gain / avg_loss
+    return 100 - 100 / (1 + rs)
+
+df[&#39;RSI&#39;] = rsi(df[&#39;收盘&#39;])
+
+# -------------------------------
+# 4. 数据清洗
+# -------------------------------
+df = df[df[&#39;收盘&#39;] &gt; 0]
+df = df.dropna(subset=[&#39;MA10&#39;, &#39;MA60&#39;, &#39;RSI&#39;])
+
+# -------------------------------
+# 5. 生成交易信号
+# -------------------------------
+# 先生成原始信号（基于当天收盘后的数据）
+df[&#39;Signal_Raw&#39;] = 0
+
+# 买入条件：MA10&gt;MA60 且 RSI&lt;30
+# 趋势向上（短期均线在长期均线上方）且超卖（RSI低于30）
+df.loc[(df[&#39;MA10&#39;] &gt; df[&#39;MA60&#39;]) &amp; (df[&#39;RSI&#39;] &lt; 30), &#39;Signal_Raw&#39;] = 1
+
+# 卖出条件：MA10&lt;MA60 或 RSI&gt;70
+# 趋势向下或超买，认为应该卖出
+df.loc[(df[&#39;MA10&#39;] &lt; df[&#39;MA60&#39;]) | (df[&#39;RSI&#39;] &gt; 70), &#39;Signal_Raw&#39;] = -1
+
+# 信号延迟一天执行，避免未来函数
+# 原理：今天收盘后才能计算出今天的RSI和均线
+#      所以今天的信号只能在明天执行
+#      shift(1)表示将信号向后移动一天
+# 例如：12月1日收盘后生成买入信号，12月2日才能买入
+df[&#39;Signal&#39;] = df[&#39;Signal_Raw&#39;].shift(1)
+
+# 删除Signal为NaN的第一行（因为shift后第一行没有前一天的信号）
+df = df.dropna(subset=[&#39;Signal&#39;])
+
+# -------------------------------
+# 6. 回测参数初始化
+# -------------------------------
+initial_cash = 10000  # 初始资金（单位：元），回测起始时的本金
+cash = initial_cash   # 当前现金余额，随着买卖操作动态变化
+shares = 0            # 当前持有的股票数量（股数），0表示空仓
+portfolio = []        # 每日总资产记录列表，用于绘制净值曲线和计算收益率
+buy_points = []       # 买入点记录列表，格式：[(日期, 价格), ...]，用于绘图标记
+sell_points = []      # 卖出点记录列表，格式：[(日期, 价格), ...]，用于绘图标记
+min_holding_days = 5  # 最小持仓天数，避免频繁交易（减少交易成本和噪音信号）
+holding_days = 0      # 当前持仓天数计数器，每天持仓时+1，卖出后归零
+
+# -------------------------------
+# 7. 回测循环
+# -------------------------------
+for date, row in df.iterrows():
+
+    price = row[&#39;开盘&#39;]  # 使用当天开盘价进行买卖操作
+    signal = row[&#39;Signal&#39;]  # 这是前一天收盘后生成的信号
+    
+    # 如果持仓，持仓天数 +1
+    if shares &gt; 0:
+        holding_days += 1
+
+    # ---------------------------
+    # 买入逻辑
+    # ---------------------------
+    # 条件：收到买入信号(signal=1) 且 当前空仓(shares=0)
+    if signal == 1 and shares == 0:
+        shares = cash / price  # 全仓买入，计算可买股数
+        cash = 0               # 现金置 0（全仓操作）
+        buy_points.append((date, price))  # 记录买入点，用于后续绘图
+        holding_days = 0       # 重置持仓天数计数器
+        print(f&quot;买入: &#123;date.date()&#125; @ &#123;price:.2f&#125;&quot;)
+
+    # ---------------------------
+    # 卖出逻辑（持仓超过最短周期）
+    # ---------------------------
+    # 条件：收到卖出信号 且 当前有持仓 且 持仓天数&gt;=最小持仓天数
+    # min_holding_days 用于避免频繁交易
+    elif signal == -1 and shares &gt; 0 and holding_days &gt;= min_holding_days:
+        cash = shares * price     # 卖出所有股票，更新现金
+        shares = 0                # 持仓置 0
+        sell_points.append((date, price))  # 记录卖出点
+        holding_days = 0           # 重置持仓天数
+        print(f&quot;卖出: &#123;date.date()&#125; @ &#123;price:.2f&#125;&quot;)
+
+    # ---------------------------
+    # 总资产计算
+    # ---------------------------
+    # 每天记录总资产 = 现金 + 持仓股数 × 当前价格
+    # 用于绘制净值曲线和计算收益率
+    portfolio.append(cash + shares * price)
+
+# 保存总资产曲线到DataFrame
+df[&#39;Portfolio&#39;] = portfolio
+
+# -------------------------------
+# 8. 绘图
+# -------------------------------
+plt.figure(figsize=(12, 8))
+plt.rcParams[&#39;font.sans-serif&#39;] = [&#39;Microsoft YaHei&#39;]  # 设置中文字体
+plt.rcParams[&#39;axes.unicode_minus&#39;] = False              # 负号正常显示
+
+# ---------------------------
+# 子图1：价格 + 均线 + 买卖点
+# ---------------------------
+plt.subplot(3,1,1)
+plt.plot(df.index, df[&#39;收盘&#39;], label=&#39;收盘价&#39;, linewidth=1.5)
+plt.plot(df.index, df[&#39;MA10&#39;], label=&#39;10日均线&#39;, color=&#39;orange&#39;, linewidth=1)
+plt.plot(df.index, df[&#39;MA60&#39;], label=&#39;60日均线&#39;, color=&#39;red&#39;, linewidth=1)
+# 绘制买入点（绿色向上三角形）
+if buy_points:
+    dates, prices = zip(*buy_points)
+    plt.scatter(dates, prices, marker=&#39;^&#39;, color=&#39;green&#39;, s=100, label=&#39;买入&#39;, zorder=5)
+# 绘制卖出点（红色向下三角形）
+if sell_points:
+    dates, prices = zip(*sell_points)
+    plt.scatter(dates, prices, marker=&#39;v&#39;, color=&#39;red&#39;, s=100, label=&#39;卖出&#39;, zorder=5)
+plt.title(&#39;贵州茅台&#39;)
+plt.legend()
+plt.grid(True, alpha=0.3)
+
+# ---------------------------
+# 子图2：净值对比
+# ---------------------------
+plt.subplot(3,1,2)
+# 策略净值曲线（我们的策略表现）
+plt.plot(df.index, df[&#39;Portfolio&#39;], label=&#39;策略净值&#39;, color=&#39;darkblue&#39;, linewidth=2)
+# 买入持有基准（如果一开始买入并一直持有）
+baseline = initial_cash * df[&#39;收盘&#39;] / df[&#39;收盘&#39;].iloc[0]
+plt.plot(df.index, baseline, label=&#39;买入持有&#39;, linestyle=&#39;--&#39;, color=&#39;gray&#39;, linewidth=2)
+plt.title(&#39;净值对比&#39;)
+plt.legend()
+plt.grid(True, alpha=0.3)
+
+# ---------------------------
+# 子图3：RSI指标
+# ---------------------------
+plt.subplot(3,1,3)
+plt.plot(df.index, df[&#39;RSI&#39;], label=&#39;RSI&#39;, color=&#39;purple&#39;, linewidth=1)
+# RSI超卖线（30以下认为超卖，可能反弹）
+plt.axhline(y=30, color=&#39;green&#39;, linestyle=&#39;--&#39;, alpha=0.5, label=&#39;超卖线(30)&#39;)
+# RSI超买线（70以上认为超买，可能回调）
+plt.axhline(y=70, color=&#39;red&#39;, linestyle=&#39;--&#39;, alpha=0.5, label=&#39;超买线(70)&#39;)
+plt.title(&#39;RSI指标&#39;)
+plt.legend()
+plt.grid(True, alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+
+# -------------------------------
+# 9. 回测结果统计
+# -------------------------------
+final_value = df[&#39;Portfolio&#39;].iloc[-1]             # 最终总资产
+total_return = (final_value / initial_cash - 1) * 100   # 策略总收益率
+baseline_return = (df[&#39;收盘&#39;].iloc[-1] / df[&#39;收盘&#39;].iloc[0] - 1) * 100  # 买入持有收益率
+
+# 计算最大回撤
+# 最大回撤 = 从历史最高点到后续最低点的最大跌幅
+df[&#39;Cummax&#39;] = df[&#39;Portfolio&#39;].cummax()  # 累计最高净值
+df[&#39;Drawdown&#39;] = (df[&#39;Portfolio&#39;] / df[&#39;Cummax&#39;] - 1) * 100  # 每日回撤百分比
+max_drawdown = df[&#39;Drawdown&#39;].min()  # 最大回撤值（负数，越小风险越大）
+
+print(&quot;=&quot; * 60)
+print(f&quot;初始资金:        ¥&#123;initial_cash:,.0f&#125;&quot;)
+print(f&quot;最终资金:        ¥&#123;final_value:,.2f&#125;&quot;)
+print(f&quot;策略总收益率:    &#123;total_return:.2f&#125;%&quot;)
+print(f&quot;买入持有收益率:  &#123;baseline_return:.2f&#125;%&quot;)
+print(f&quot;超额收益:        &#123;total_return - baseline_return:.2f&#125;%&quot;)
+print(f&quot;最大回撤:        &#123;max_drawdown:.2f&#125;%&quot;)
+print(f&quot;交易次数:        买入&#123;len(buy_points)&#125;次, 卖出&#123;len(sell_points)&#125;次&quot;)
+print(&quot;=&quot; * 60)
+</code></pre>
+<img src="/images/qtrade/Result_1.png" alt="2" title="Rusult_1" width="400">
+<img src="/images/qtrade/Figure_1.png" alt="2" title="Figure_1" width="1200">
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 Akane4444の 喵喵屋
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Akane4444
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+    <div>
+        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+        <script>
+            var now = new Date(); 
+            function createtime() { 
+                var grt= new Date("05/10/2024 00:00:00");//在此处修改你的建站时间
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒   "; 
+            } 
+        setInterval("createtime()",250);
+        </script>
+        <span id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>          
+        </div>  
+        
+        
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo="Akane4444hyh/Akane4444hyh.github.io"
+    data-repo-id="R_kgDOL2-34w"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOL2-3484CfTIx"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="https://static-argvchs.netlify.app/css/giscus.css"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+    
+</body>
+</html>

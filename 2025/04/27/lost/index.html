@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>It&#39;s not mygo | Akane4444の 喵喵屋</title>
+    <meta name="author" content="Akane4444" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avater2.png" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
+
+
+
+
+
+
+
+
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="preconnect" href="https://static-argvchs.netlify.app" />
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Akane4444の 喵喵屋" type="application/atom+xml">
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>Tips:多按F5喵（圖片加載慢慢）</p>
+                    <p>     使用魔法會更快喵</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>AKANE4444の 喵喵屋</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;主頁</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;關於我</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;歸檔</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分類</span>
+        </a>
+        
+        <a href="/comment">
+            <i class="fa-solid fa-comment fa-fw"></i>
+            <span>&ensp;討論區</span>
+        </a>
+        
+        <a href="/atom.xml">
+            <i class="fa-solid fa-square-rss fa-fw"></i>
+            <span>&ensp;RSS</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;AKANE4444の 喵喵屋</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">主頁</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">關於我</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">歸檔</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">分類</div>
+                    </div>
+                </a>
+                
+                <a href="/comment">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-comment fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">討論區</div>
+                    </div>
+                </a>
+                
+                <a href="/atom.xml">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-square-rss fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">RSS</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>It&#39;s not mygo</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/4/27
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                時罅糸語
+            </a>
+        </span>
+        
+        
+    </div>
+    
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="被加密了~，渴望密碼喵"
+        data-encrypted="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"
+        data-shasum="6fa24919c66e455383d2e8c51dbc2cd6a5462f779fb9818a36def34440fefac9"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 Akane4444の 喵喵屋
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Akane4444
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+    <div>
+        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+        <script>
+            var now = new Date(); 
+            function createtime() { 
+                var grt= new Date("05/10/2024 00:00:00");//在此处修改你的建站时间
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒   "; 
+            } 
+        setInterval("createtime()",250);
+        </script>
+        <span id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>          
+        </div>  
+        
+        
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo="Akane4444hyh/Akane4444hyh.github.io"
+    data-repo-id="R_kgDOL2-34w"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOL2-3484CfTIx"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="https://static-argvchs.netlify.app/css/giscus.css"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>《厭女》：厭女症與女性主義 | Akane4444の 喵喵屋</title>
+    <meta name="author" content="Akane4444" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avater2.png" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+<link rel="stylesheet" href="/css/main.css" />
+<link rel="preconnect" href="https://static-argvchs.netlify.app" />
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Akane4444の 喵喵屋" type="application/atom+xml">
+</head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>Tips:多按F5喵（圖片加載慢慢）</p>
+                    <p>     使用魔法會更快喵</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>AKANE4444の 喵喵屋</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;主頁</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;關於我</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;歸檔</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分類</span>
+        </a>
+        
+        <a href="/comment">
+            <i class="fa-solid fa-comment fa-fw"></i>
+            <span>&ensp;討論區</span>
+        </a>
+        
+        <a href="/atom.xml">
+            <i class="fa-solid fa-square-rss fa-fw"></i>
+            <span>&ensp;RSS</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;AKANE4444の 喵喵屋</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">主頁</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">關於我</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">歸檔</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">分類</div>
+                    </div>
+                </a>
+                
+                <a href="/comment">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-comment fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">討論區</div>
+                    </div>
+                </a>
+                
+                <a href="/atom.xml">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-square-rss fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">RSS</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>《厭女》：厭女症與女性主義</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/6/2
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E4%BB%96%E5%B1%B1%E4%B9%8B%E7%9F%B3/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                他山之石
+            </a>
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>&emsp;&emsp;大概在4月份左右，我在油管刷到安爭鳴老師的《讀書時間》，其中講了上野千鶴子教授的《厭女》著本書。不久卻又在學校圖書館翻書時偶遇到了這本<em><strong>《厭女：日本的女性嫌惡（增訂本）》</strong></em>，我信任了地球online的大數據，於是借下了這本徹底改變我的性別觀的書。<br><img src="https://cdn.jsdelivr.net/gh/Akane4444hyh/cdn@4.0.5/images/book/yannv/yannv.jpg" alt="2" title="書本封面" width="200"></p>
+<h5><span id="厭女症">厭女症</span></h5><p>&emsp;&emsp;開篇，上野教授便闡釋了<strong>厭女症</strong>的概念,一針見血的指出了厭女症的普世性：</p>
+<blockquote>
+<p>&emsp;&emsp;misogyny，译为“厌女症”。可很多有厌女症的男人其实喜欢女人。明明“厌女”，却又“喜欢女人”，听起来不可思议。那么，misogyny还有个更好懂的译法，“女性蔑视”，他们只把女人视为泄欲道具，无论哪个女人，只要具有裸体、迷你裙等“女性符号”，就能发生反应，像巴甫洛夫那条听见铃声便流口水的狗，实在可惊可叹。如果男人身体中不具备这个机制，性产业就不会成立。<br>&emsp;&emsp;在性别二元制的性别秩序里，深植于核心位置的，便是厌女症，在这个秩序之下，无论男人女人，无人能逃离厌女症的笼罩。厌女症弥漫在这个秩序体制之中，如同物体的重力一般，因为太理所当然而使人几乎意识不到它的存在。<br>&emsp;&emsp;不过，厌女症的表现形式在男女身上并不对称。在男人身上表现为“女性蔑视”，在女人身上则表现为“自我厌恶”。换个更浅显的说法，在迄今为止的人生中，有一次也没有庆幸过没生为女人的男人吗？有一次也没有抱怨过生为女人吃了亏的女人吗？</p>
+</blockquote>
+<p>&emsp;&emsp;簡單的解釋，男人的厌女症的就是將女性<strong>他者化</strong>，簡化為一個小小的性器官，相對於主體（男人）的客體。這裏要引出一組概念，<strong>男性同性社會性欲望</strong>（來自Eve Kosofsky Sedgwick所寫的書<em><strong>Between Men: English Literature and Male Homosocial Desire</strong></em>）和<strong>恐同</strong>，這兩者共同維繫着父權社會。所謂<strong>男性同性社會性欲望</strong>，即互相認可為性的主體的紐帶。</p>
+<p>&emsp;&emsp;我最近看的一部老電影<em><strong>Once Upon a Time in America</strong></em>，電影中總共出現noodle三次强奸，第一次是少年時期和max在威脅地頭蛇强奸妓女peggy，第二次是工作時强奸鑽石商妻子carol，第三次是强奸Deborah。印象深刻的是電影中的第二次，當時noodle剛從監獄裏出來，卻在第一次團夥作案的時候施行了性行爲，爲什麽要在忙著搶劫錢財的時候，在同伴面前强奸一個（要求被强奸的）女人呢？我當時很疑惑，但看完了本書之後有了答案，這大概是一種對性的主體的宣誓，想要被重新認可的渴望，noodle重新想要融入這男人世界而做出的，男人認爲最樸實的方式。同樣之後，max也以最簡單的厭女的形式（辱駡，貶低carol）來證明自己（noodle入獄）多年來在小團體中取代noodle所擁有的地位的權力。</p>
+<p>&emsp;&emsp;我確乎能夠解釋現實中我一直漠不關心卻百思不解的現象了。</p>
+<p>&emsp;&emsp;對於<strong>恐同</strong>，上野教授在文中特意將其與男性同性社會性欲望稱爲“一枚硬幣的兩面”。男性是<strong>插入者（penetrater）</strong>， 女性是<strong>被插入者（penetrate）</strong>，父權制下對同性戀中成爲被插入者的可能的想象，使得恐同必然存在成爲被插入者意味著被<strong>女性化（feminize）</strong>，即成爲性的客體，歸於處於劣勢的女性集團，也就是男性集團捨棄而成爲弱勢的一方了。這也不難推測，如今也有女性在努力進入這個男性集團的原因了。</p>
+<p>&emsp;&emsp;這是對於表現為“自我厭惡”女性的厭女症的另一種形式，上野教授寫道：</p>
+<blockquote>
+<p>厌女症之于女人即为自我厌恶，但女人也有可能不将厌女症作为自我厌恶来体验，其方式就是把自己当作女人中的“例外”，将除自己以外的女人“他者化”，从而把厌女症转嫁出去。为此，有两种策略。一种是成为特权精英女人，被男人当作“名誉男人”来对待，即成为“女强人”的策略。另一种是自动退出“女人”的范畴，从面逃脱被估价的女人身份，即“丑女”策略。或许可说，前一种是“往上走”的策略，后一种是“往下退”的策略。</p>
+</blockquote>
+<p>&emsp;&emsp;對厭女的逃避，實質上也是厭女症，即將自身排除在女性弱勢利益集團内，成爲“准男性”，説這：“那些女人正是麻煩”“我和那些女人不一樣”這樣的話，她們把矛頭對準了錯誤的人，卻沒有對準真正應該指責的父權社會。</p>
+<p>&emsp;&emsp;然而，現在卻經常出現男性娘化的現實，這是否就是一種對厭女症的突破呢？對於兩性關係，上野教授曾經總結為“女人是‘朝向生體的異化’，而男人是‘遠離生體的異化’”“‘女人從屬於生體，男人支配生體’”。某些男性由於自身的弱小或認爲自身的弱小，無法被男性集團（也包含在這種制度影響下的女性）認同，但卻仍然有著與女性同化的願望，因此，這實質上不是一種厭女症的突破。同樣的蘿莉控也如此。</p>
+<h5><span id="女性主義">女性主義</span></h5><p>&emsp;&emsp;社會上恐怕沒有不被厭女症侵染的人，而“女性主義者，就是意識到厭女症而決意與之鬥爭的的人”.很多人認爲身爲男性的女性主義者是“强加的正義”，而事實上并非如此（可能是部分僞女性主義者給世人的錯覺）。上野教授在<em><strong>《厭女症能夠超越嗎》</strong></em>中寫到：</p>
+<blockquote>
+<p>对于女人，女性主义是与自我和解之途。对于男人，与自我和解的道路，也不应该没有吧。和女人一样，那应该是与“自我厌恶”的斗争，不过，为男人指出道路的任务，已经不该由女人来承担了。</p>
+</blockquote>
+<p>&emsp;&emsp;我想到李銀河教授的一句話：“一個人首先是人，然後才是男人或者女人，女人除了能生孩子，和男人沒有什麽本質的不同。”不得不感慨，有些時候很簡單的一次些道理，很多時候很多人很多很多做不到。</p>
+<h5><span id="厭女症與我與v圈">厭女症與我與V圈</span></h5><p>&emsp;&emsp;曾今有過養電子寵物的經歷。一起朝聖嘉然的那些時候，一起的爲愛發電那些時候，喜歡的是與其他嘉心糖一起濕潤眼眶，感慨寫不出新戶眠子的《不推嘉然小姐十年了》的史詩感，達不到世界綫的《你不在乎我，因爲我是認知厨》的深情。卻在有一天深夜，一個人在廣場上看到asoul聯動的肯德基店，幾個小朋友對著嘉然的粉指指點點，歡聲笑語中，我發現其實我從來沒有喜歡過嘉然。當時的我得出結論：我只是渴望逃離下水道，逃向城市中心的老鼠罷了。管人痴是共同侍奉一個公主的游俠騎士，他們從未真正愛過公主，他們只是想要成爲“游俠騎士”罷。<br><img src="https://cdn.jsdelivr.net/gh/Akane4444hyh/cdn@4.0.5/images/book/yannv/2.jpg" alt="2" title="書本封面" width="200"><br>&emsp;&emsp;曾經有過的感覺和信念，後來遇到了契合的思想，的確是人生一大妙事。</p>
+<p>&emsp;&emsp;<strong>＿希望大家都能為解放自我而鬥爭吧＿</strong></p>
+<p>參考資料<br>1.上野千鶴子《厭女：日本的女性嫌惡（增訂本）》(原版：上野 千鶴子『女ぎらい』)<br>2.安爭鳴《【读书时间】什么是“厌女症”？怎么知道自己是否“厌女”？上野千鹤子谈日本的女性嫌恶》<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Igf3X4J21_g&t=26s">https://www.youtube.com/watch?v=Igf3X4J21_g&amp;t=26s</a></p>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 Akane4444の 喵喵屋
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Akane4444
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+    <div>
+        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+        <script>
+            var now = new Date(); 
+            function createtime() { 
+                var grt= new Date("05/10/2024 00:00:00");//在此处修改你的建站时间
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
+                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒   "; 
+            } 
+        setInterval("createtime()",250);
+        </script>
+        <span id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>          
+        </div>  
+        
+        
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo="Akane4444hyh/Akane4444hyh.github.io"
+    data-repo-id="R_kgDOL2-34w"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOL2-3484CfTIx"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="https://static-argvchs.netlify.app/css/giscus.css"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+    
+</body>
+</html>

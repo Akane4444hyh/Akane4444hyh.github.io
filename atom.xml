@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Akane4444の 喵喵屋</title>
+  
+  
+  <link href="https://akane4444hyh.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://akane4444hyh.github.io/"/>
+  <updated>2026-02-09T10:23:14.095Z</updated>
+  <id>https://akane4444hyh.github.io/</id>
+  
+  <author>
+    <name>Akane4444</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>第一次握手</title>
+    <link href="https://akane4444hyh.github.io/2026/02/09/review-s1/"/>
+    <id>https://akane4444hyh.github.io/2026/02/09/review-s1/</id>
+    <published>2026-02-09T05:59:40.000Z</published>
+    <updated>2026-02-09T10:23:14.095Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;引子&quot;&gt;&lt;a href=&quot;#引子&quot; class=&quot;headerlink&quot; title=&quot;引子&quot;&gt;&lt;/a&gt;引子&lt;/h2&gt;&lt;p&gt;&amp;emsp;&amp;emsp;這大概是一篇對轉瞬即逝的大一上的訣別&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="時罅糸語" scheme="https://akane4444hyh.github.io/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>飽食終日的我</title>
+    <link href="https://akane4444hyh.github.io/2025/12/28/sac01/"/>
+    <id>https://akane4444hyh.github.io/2025/12/28/sac01/</id>
+    <published>2025-12-28T05:00:00.000Z</published>
+    <updated>2025-12-27T08:55:27.873Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="四曡半内" scheme="https://akane4444hyh.github.io/categories/%E5%9B%9B%E6%9B%A1%E5%8D%8A%E5%86%85/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>量化交易筆記</title>
+    <link href="https://akane4444hyh.github.io/2025/12/18/qtrade/"/>
+    <id>https://akane4444hyh.github.io/2025/12/18/qtrade/</id>
+    <published>2025-12-19T01:20:20.000Z</published>
+    <updated>2025-12-19T12:54:57.150Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文章將記錄本人從2025年12月18日開始的量化交易學習記錄&lt;/p&gt;
+&lt;!-- toc --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1218&quot;&gt;12.18&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#emspemsp%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E5%AD%B8%E7%BF%92%E5%B0%8E%E5%9C%96&quot;&gt;&amp;emsp;&amp;emsp;量化交易學習導圖&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#emspemsp%E8%A9%B1%E8%A1%93%E5%96%B5%CF%89~&quot;&gt;&amp;emsp;&amp;emsp;話術喵(^ω^)~&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#1219&quot;&gt;12.19&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#emspemsp%E6%A8%A1%E6%8B%9F%E7%BB%83%E4%B9%A0%E5%9D%87%E7%BA%BFrsi%E7%AD%96%E7%95%A5%E5%9B%9E%E6%B5%8B&quot;&gt;&amp;emsp;&amp;emsp;模拟练习（均线+RSI策略回测）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- tocstop --&gt;</summary>
+    
+    
+    
+    <category term="技經肯綮" scheme="https://akane4444hyh.github.io/categories/%E6%8A%80%E7%B6%93%E8%82%AF%E7%B6%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《罪與罰》閲讀筆記</title>
+    <link href="https://akane4444hyh.github.io/2025/11/28/sentence/"/>
+    <id>https://akane4444hyh.github.io/2025/11/28/sentence/</id>
+    <published>2025-11-28T05:00:00.000Z</published>
+    <updated>2025-11-29T17:23:37.322Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;向來是討厭閲讀翻譯的外國小説，或許是對陌生卻默認的社會背景感到出戲，或是對細緻卻彆扭的語言習慣感到疲憊，至今不能説出這本書主視角的全名是什麽（出現的時候，自動用“羅佳”替換掉了）。然而在外國小説中，人與人之間的稱呼往往是重要的，想到這裏，不免感到後悔。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="他山之石" scheme="https://akane4444hyh.github.io/categories/%E4%BB%96%E5%B1%B1%E4%B9%8B%E7%9F%B3/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>你蘭能不能有個像樣的素菜呵！</title>
+    <link href="https://akane4444hyh.github.io/2025/11/12/daily-one/"/>
+    <id>https://akane4444hyh.github.io/2025/11/12/daily-one/</id>
+    <published>2025-11-12T18:43:43.000Z</published>
+    <updated>2025-11-12T06:10:11.556Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;現在是週三。最近似乎得了胃病。</summary>
+    
+    
+    
+    <category term="時罅糸語" scheme="https://akane4444hyh.github.io/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>FUTURE_LEARN_PLAN</title>
+    <link href="https://akane4444hyh.github.io/2025/09/28/future-learn-plan/"/>
+    <id>https://akane4444hyh.github.io/2025/09/28/future-learn-plan/</id>
+    <published>2025-09-28T04:15:28.000Z</published>
+    <updated>2025-09-27T15:22:14.866Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;FLP 1nd EDITION Ver2.01&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技經肯綮" scheme="https://akane4444hyh.github.io/categories/%E6%8A%80%E7%B6%93%E8%82%AF%E7%B6%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>困</title>
+    <link href="https://akane4444hyh.github.io/2025/09/28/stuck_maybe/"/>
+    <id>https://akane4444hyh.github.io/2025/09/28/stuck_maybe/</id>
+    <published>2025-09-28T04:03:28.000Z</published>
+    <updated>2025-09-27T14:47:12.836Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;寫在前頭，大概是z的緣故，上半年的情緒低迷。抱歉太久沒更新“喵喵屋”這一個blog了。此文獻給黑暗中的Porlownia，現在的Cici；&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="時罅糸語" scheme="https://akane4444hyh.github.io/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大家好啊，歡迎來到我的blog</title>
+    <link href="https://akane4444hyh.github.io/2025/06/26/welcome/"/>
+    <id>https://akane4444hyh.github.io/2025/06/26/welcome/</id>
+    <published>2025-06-26T19:27:32.000Z</published>
+    <updated>2025-07-28T01:15:42.016Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="初升新月" scheme="https://akane4444hyh.github.io/categories/%E5%88%9D%E5%8D%87%E6%96%B0%E6%9C%88/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>It&#39;s not mygo</title>
+    <link href="https://akane4444hyh.github.io/2025/04/27/lost/"/>
+    <id>https://akane4444hyh.github.io/2025/04/27/lost/</id>
+    <published>2025-04-27T21:21:41.000Z</published>
+    <updated>2025-06-26T07:04:45.160Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;.&lt;br&gt;</summary>
+    
+    
+    
+    <category term="時罅糸語" scheme="https://akane4444hyh.github.io/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我會認錯我的過去</title>
+    <link href="https://akane4444hyh.github.io/2025/03/28/0328/"/>
+    <id>https://akane4444hyh.github.io/2025/03/28/0328/</id>
+    <published>2025-03-28T04:33:42.000Z</published>
+    <updated>2025-06-26T07:03:28.176Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="時罅糸語" scheme="https://akane4444hyh.github.io/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>記憶-春節</title>
+    <link href="https://akane4444hyh.github.io/2025/01/29/memory-one/"/>
+    <id>https://akane4444hyh.github.io/2025/01/29/memory-one/</id>
+    <published>2025-01-30T01:00:00.000Z</published>
+    <updated>2025-01-29T15:15:46.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近看了&lt;a href=&quot;https://www.yixi.tv/#/speech/detail?id=1252&quot;&gt;一篇演讲&lt;/a&gt;</summary>
+    
+    
+    
+    <category term="時罅糸語" scheme="https://akane4444hyh.github.io/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Why does it have to be the Uninvited Guest? 爲什麽是不速之客？</title>
+    <link href="https://akane4444hyh.github.io/2024/10/28/whyuninvitedguest/"/>
+    <id>https://akane4444hyh.github.io/2024/10/28/whyuninvitedguest/</id>
+    <published>2024-10-28T04:00:00.000Z</published>
+    <updated>2024-10-20T12:37:58.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Why does it have to be the Uninvited Guest? After experiencing it from the character’s perspective, just like other Otaku, on 5th Sept., I had a restless night.</summary>
+    
+    
+    
+    <category term="四曡半内" scheme="https://akane4444hyh.github.io/categories/%E5%9B%9B%E6%9B%A1%E5%8D%8A%E5%86%85/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>神明歆享了少女心上的牛雜羊碎</title>
+    <link href="https://akane4444hyh.github.io/2024/09/22/kamisama/"/>
+    <id>https://akane4444hyh.github.io/2024/09/22/kamisama/</id>
+    <published>2024-09-22T18:00:00.000Z</published>
+    <updated>2025-06-26T07:24:40.451Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;神明歆享了少女心上的的牛雜羊碎，忽明忽暗的在空中蹒跚，豫备给再次真實的她以无限的幸福&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="時罅糸語" scheme="https://akane4444hyh.github.io/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>走廊第一定律的發現與證明</title>
+    <link href="https://akane4444hyh.github.io/2024/09/08/garbagethinking/"/>
+    <id>https://akane4444hyh.github.io/2024/09/08/garbagethinking/</id>
+    <published>2024-09-08T04:00:00.000Z</published>
+    <updated>2025-09-27T14:46:12.027Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;走廊第一定律&quot;&gt;&lt;a href=&quot;#走廊第一定律&quot; class=&quot;headerlink&quot; title=&quot;走廊第一定律&quot;&gt;&lt;/a&gt;走廊第一定律&lt;/h3&gt;&lt;p&gt;&amp;emsp;&amp;emsp;即使擁有多年的行走經驗，我們人類仍然無法做到100%在狹窄的走廊避免與他人相向而行的時候相撞，這個多年被人們忽略的問題在akane4444所著的《自然哲學的數學歪理》中得到了解答。以下是記錄中的珍貴資料：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="亂語胡言" scheme="https://akane4444hyh.github.io/categories/%E4%BA%82%E8%AA%9E%E8%83%A1%E8%A8%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>在水仙盛開的現在喃喃自語的記錄</title>
+    <link href="https://akane4444hyh.github.io/2024/07/28/narcissus/"/>
+    <id>https://akane4444hyh.github.io/2024/07/28/narcissus/</id>
+    <published>2024-07-28T04:00:00.000Z</published>
+    <updated>2025-06-26T07:10:37.878Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;經常想起了楊絳寫的《老王》的結尾————“那是一幸運的人對不幸者的愧怍”。雖忘卻前言，但“愧怍”，這總在身邊影影綽綽閃閃忽忽的詞語，是能被我再三認識的。回憶起前兩個月————這是連續三場不大不小的考試的罅隙，同齡的體制内學生，大概多年以後，即便面對行刑隊，也想不起來這段在教室前後放冰塊降溫的暑假補課和平凡的考試————我大概會記得很清楚罷。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="時罅糸語" scheme="https://akane4444hyh.github.io/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>網頁效用效果筆記（持續更</title>
+    <link href="https://akane4444hyh.github.io/2024/07/28/webwordskill/"/>
+    <id>https://akane4444hyh.github.io/2024/07/28/webwordskill/</id>
+    <published>2024-07-28T04:00:00.000Z</published>
+    <updated>2024-07-29T04:02:16.000Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;刪除綫&quot;&gt;&lt;a href=&quot;#刪除綫&quot; class=&quot;headerlink&quot; title=&quot;刪除綫&quot;&gt;&lt;/a&gt;刪除綫&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Display&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;Source code&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;code&gt;~~akane~~&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;Rendering effect&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;&lt;del&gt;akane&lt;/del&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;參考資料： &lt;a href=&quot;https://markdown.com.cn/&quot;&gt;https://markdown.com.cn&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;萌娘百科黑幕實現&quot;&gt;&lt;a href=&quot;#萌娘百科黑幕實現&quot; class=&quot;headerlink&quot; title=&quot;萌娘百科黑幕實現&quot;&gt;&lt;/a&gt;萌娘百科黑幕實現&lt;/h3&gt;&lt;p&gt;在&#92;source&#92;css&#92;main.css中加入以下内容:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技經肯綮" scheme="https://akane4444hyh.github.io/categories/%E6%8A%80%E7%B6%93%E8%82%AF%E7%B6%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《厭女》：厭女症與女性主義</title>
+    <link href="https://akane4444hyh.github.io/2024/06/02/yannv/"/>
+    <id>https://akane4444hyh.github.io/2024/06/02/yannv/</id>
+    <published>2024-06-02T04:30:00.000Z</published>
+    <updated>2024-09-21T13:11:40.000Z</updated>
+    
+    
+    <summary type="html">在二十一世紀讀到這本書，就像十九世紀的工人讀到了資本論，在2024年5月，這本書徹底改變了我的性別觀念。&lt;img src=&quot;https://cdn.jsdelivr.net/gh/Akane4444hyh/cdn@4.0.5/images/book/yannv/yannv.jpg&quot; alt=&quot;2&quot; title=&quot;書本封面&quot; width=&#39;300&#39;&gt;</summary>
+    
+    
+    
+    <category term="他山之石" scheme="https://akane4444hyh.github.io/categories/%E4%BB%96%E5%B1%B1%E4%B9%8B%E7%9F%B3/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>關於我的Blog</title>
+    <link href="https://akane4444hyh.github.io/2024/05/25/about/"/>
+    <id>https://akane4444hyh.github.io/2024/05/25/about/</id>
+    <published>2024-05-25T19:13:18.000Z</published>
+    <updated>2025-06-26T07:44:54.537Z</updated>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;emsp-emsp-這是關於我和Blog的故事&quot;&gt;&lt;a href=&quot;#emsp-emsp-這是關於我和Blog的故事&quot; class=&quot;headerlink&quot; title=&quot;&amp;emsp;&amp;emsp;這是關於我和Blog的故事&quot;&gt;&lt;/a&gt;&amp;emsp;&amp;emsp;這是關於我和Blog的故事&lt;/h4&gt;&lt;img src=&quot;/images/cover/1.jpg&quot; alt=&quot;2&quot; title=&quot;圖片來源於https://www.youtube.com/watch?v=NVcVxddOzPs&quot; width=&#39;1500&#39;&gt;</summary>
+    
+    
+    
+    <category term="初升新月" scheme="https://akane4444hyh.github.io/categories/%E5%88%9D%E5%8D%87%E6%96%B0%E6%9C%88/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>最初的章節</title>
+    <link href="https://akane4444hyh.github.io/2024/05/10/first/"/>
+    <id>https://akane4444hyh.github.io/2024/05/10/first/</id>
+    <published>2024-05-10T19:33:33.000Z</published>
+    <updated>2025-06-26T07:44:55.416Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;這是最初的章節&lt;br&gt;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;不是最後的章節&lt;br&gt;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;這是最初的禱告&lt;br&gt;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;不是最後的命途&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="初升新月" scheme="https://akane4444hyh.github.io/categories/%E5%88%9D%E5%8D%87%E6%96%B0%E6%9C%88/"/>
+    
+    
+  </entry>
+  
+</feed>
