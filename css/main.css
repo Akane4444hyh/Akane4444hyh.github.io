@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'Maple Mono';
+    src: url('https://cdn.jsdelivr.net/gh/subframe7536/maple-font@main/MapleMono-NF-CN-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maple Mono';
+    src: url('https://cdn.jsdelivr.net/gh/subframe7536/maple-font@main/MapleMono-NF-CN-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 #archives {
     margin: auto;
     margin-top: 100px;
@@ -703,7 +719,7 @@ blockquote {
 body {
     background: #f8f8ff;
     color: #382a2a;
-    font: 500 14px Lexend, "Noto Sans SC", sans-serif;
+    font: 500 14px "Maple Mono", "Noto Sans SC", sans-serif;
     overflow-x: hidden;
     width: 100%;
 }
@@ -780,7 +796,7 @@ code,
 .hljs,
 .input,
 .language {
-    font-family: "Fira Code", "Noto Sans SC", monospace;
+    font-family: "JetBrains Mono", "Fira Code", "Noto Sans SC", monospace;
 }
 table:not(.hljs-ln) {
     margin: 15px 0;
