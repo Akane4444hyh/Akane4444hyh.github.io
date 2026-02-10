@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Maple Mono';
-    src: url('https://cdn.jsdelivr.net/gh/subframe7536/maple-font@main/MapleMono-NF-CN-Regular.ttf') format('truetype');
+    src: url('/fonts/MapleMono-NF-CN-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Maple Mono';
-    src: url('https://cdn.jsdelivr.net/gh/subframe7536/maple-font@main/MapleMono-NF-CN-Bold.ttf') format('truetype');
+    src: url('/fonts/MapleMono-NF-CN-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
     font-display: swap;

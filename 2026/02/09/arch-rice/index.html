@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>My Arch Rice Journey | Akane4444の 喵喵屋</title>
+    <title>Fufu&#39;s Arch Rice Journey | Akane4444の 喵喵屋</title>
     <meta name="author" content="Akane4444" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -179,7 +179,7 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>My Arch Rice Journey</h1>
+        <h1>Fufu&#39;s Arch Rice Journey</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -204,11 +204,11 @@
     <div class="content" v-pre>
         <p><strong>Only a Dying Man Last Delusion</strong></p>
 <span id="more"></span>
-<p><strong>Device Information</strong><br>    Device: Lenovo ThinkBook 16 G7+ IAH (21TL)<br>    CPU: Intel Core Ultra 9 285Z<br>    GPU: NVIDIA GeForce RTX 5060<br>    RAM: 32 GB<br>    STORAGE: 1TB NVMe SSD (ZhiTai Ti7100)<br>    Display: 3200x2000 @ 60Hz (MNG007ZA1-4)</p>
+<p><strong>Fufu’s Device Information</strong><br>    Device: Lenovo ThinkBook 16 G7+ IAH (21TL)<br>    CPU: Intel Core Ultra 9 285Z<br>    GPU: NVIDIA GeForce RTX 5060<br>    RAM: 32 GB<br>    STORAGE: 1TB NVMe SSD (ZhiTai Ti7100)<br>    Display: 3200x2000 @ 60Hz (MNG007ZA1-4)</p>
 <h2><span id="dying-man-last-delusion">Dying Man Last Delusion</span></h2><p>Nobody knows what a customized desktop means to a thirsty Narcissus.</p>
-<p>It’s not just about easily reading official Docs or writing simple Scripts,</p>
-<p>It is a countless debate with poor free LLM, endless searching for solutions for my NVIDIA 5060, and hysterically staring at dazzling screen for 15 hours until 3 a.m. just for adjusting a little button to a right place and play its own role.</p>
-<h2><span id="a-long-journey">A Long Journey</span></h2><p>Before Arch, I had some basic Linux experience.</p>
+<p>It is not just about easily reading official Docs or writing simple Scripts</p>
+<p>It is countless debate with poor free LLM, endless searching for solutions to make the NVIDIA 5060 behave, and hysterically staring at a dazzling screen for 15 hours until 3 a.m. just for adjusting a little button to a right place and play its own role.</p>
+<h2><span id="a-long-journey">A Long Journey</span></h2><p>Before Arch, Fufu has some basic Linux experience.</p>
 <ul>
 <li>Tried Ubuntu in VMware</li>
 <li>Used Linux Mint for daily learning</li>
@@ -216,14 +216,15 @@
 </ul>
 <p>Everything worked well.</p>
 <p>It felt like a perfect start.</p>
-<p>But things changed after I moved to vanilla Arch Linux</p>
-<h2><span id="installing-vanilla-arch-linux">Installing Vanilla Arch Linux</span></h2><p>I installed Arch Linux using Ventoy and the official ISO.</p>
-<h3><span id="basic-setup">Basic Setup</span></h3><p>a.Connect to the internet using <code>iwd</code></p>
-<p>b.Enable time synchronization using <code>timedatectl</code></p>
+<p>But things changed after moving to vanilla Arch Linux.</p>
+<h2><span id="installing-vanilla-arch-linux">Installing Vanilla Arch Linux</span></h2><p><em>This part is mostly a technical record, in case future Fufu forgets everything again.</em></p>
+<p>Fufu installed Arch Linux using Ventoy and the official ISO.</p>
+<h3><span id="basic-setup">Basic Setup</span></h3><p><strong>a</strong>.Connect to the internet using <code>iwd</code></p>
+<p><strong>b</strong>.Enable time synchronization using <code>timedatectl</code></p>
 <pre><code class="bash">timedatectl set-ntp true
 </code></pre>
-<p>c.Configure mirrors using <code>reflector</code> and <code>archlinux-keyring</code></p>
-<p>d.Create partitions using GPT and <code>cfdisk</code> :</p>
+<p><strong>c</strong>.Configure mirrors using <code>reflector</code> and <code>archlinux-keyring</code></p>
+<p><strong>d</strong>.Create partitions using GPT and <code>cfdisk</code> </p>
 <pre><code class="bash">lsblk -f
 </code></pre>
 <p>find the prepared disk space </p>
@@ -251,13 +252,14 @@
 <td>Remaining</td>
 </tr>
 </tbody></table>
-<p>e. Formatting</p>
+<p><strong>e</strong>. Formatting</p>
 <pre><code class="bash">mkfs.fat -F32 /dev/nvme0n1p1
 mkswap /dev/nvme0n1p3
 swapon /dev/nvme0n1p3
 mkfs.btrfs /dev/nvme0n1p2
 </code></pre>
-<p>f. Btrfs Subvolumes<br>Create subvolumes(mount temporarily)</p>
+<p><strong>f</strong>. Btrfs Subvolumes</p>
+<p>Create subvolumes(mount temporarily)</p>
 <pre><code class="bash">mount /dev/nvme0n1p2 /mnt 
 btrfs subvolume create /mnt/@ 
 btrfs subvolume create /mnt/@home 
@@ -270,39 +272,40 @@ mount -t btrfs -o subvol=@home,compress=zstd /dev/nvme0n1p2 /mnt/home
 mkdir -p /mnt/efi 
 mount /dev/nvme0n1p1 /mnt/efi 
 </code></pre>
-<h3><span id="install-base-system">Install Base System</span></h3><p>a.Install necessary</p>
+<h3><span id="install-base-system">Install Base System</span></h3><p><strong>a</strong>.Install necessary</p>
 <pre><code class="bash">pacstrap -K /mnt base base-devel linux-zen linux-firmware btrfs-progs vim networkmanager sudo intel-ucode
 </code></pre>
-<p>b.Generate <code>fstab</code></p>
+<p><strong>b</strong>.Generate <code>fstab</code></p>
 <pre><code class="bash">genfstab -U /mnt &gt; /mnt/etc/fstab
 </code></pre>
-<p>c.CHROOT!!!!!</p>
+<p><strong>c</strong>.CHROOT!!!!!</p>
 <pre><code class="bash">arch-chroot /mnt
 </code></pre>
-<p>Enable network service:</p>
+<p>Enable network service</p>
 <pre><code class="bash">systemctl enable NetworkManager
 </code></pre>
-<p>c1.Configure timezone using <code>timedatectl</code> </p>
+<p><strong>c1</strong>.Configure timezone using <code>timedatectl</code> </p>
 <pre><code class="bash">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
 </code></pre>
-<p>c2.Localize</p>
+<p><strong>c2</strong>.Localize</p>
 <pre><code class="bash">vim /etc/locale.gen
 </code></pre>
-<p>uncomment en_US UTF-8</p>
+<p>Then uncomment en_US UTF-8</p>
 <pre><code class="bash">locale-gen
 </code></pre>
 <pre><code class="bash">vim /etc/locale.conf
 </code></pre>
-<p>write:”LANG&#x3D;en_US.UTF-8”</p>
-<p>c3.Hostname</p>
+<p>Then write:”LANG&#x3D;en_US.UTF-8”</p>
+<p><strong>c3</strong>.Hostname</p>
 <pre><code class="bash">vim /etc/hostname
 </code></pre>
-<p>write: hostname-you-like</p>
-<p>c4.Root<br>set root passwd</p>
+<p>Then write: hostname-you-like</p>
+<p><strong>c4</strong>.Root</p>
+<p>Set root passwd</p>
 <pre><code class="bash">passwd
 </code></pre>
-<p>c5.Install <code>grub</code> and <code>efibootmgr</code></p>
+<p><strong>c5</strong>.Install <code>grub</code> and <code>efibootmgr</code></p>
 <pre><code class="bash">pacman -S grub efibootmgr
 </code></pre>
 <p>(Since customized the EFI mount point)</p>
@@ -310,43 +313,53 @@ hwclock --systohc
 </code></pre>
 <pre><code class="bash">grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre>
-<p>c6.If dual-boot System</p>
+<p><strong>c6</strong>.If dual-boot System</p>
 <pre><code class="bash">pacman -S os-prober exfat-utils
 </code></pre>
-<p>edit &#x2F;etc&#x2F;default&#x2F;grub<br>uncomment the line has “os-prober”</p>
+<pre><code class="bash">vim /etc/default/grub
+</code></pre>
+<p>Then uncomment the line has “os-prober”</p>
 <pre><code class="bash">grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre>
 <p>REBOOT!!!!</p>
-<p>change boot options</p>
+<p>Change boot options</p>
 <p>–</p>
-<p><strong>the first problem</strong></p>
-<p><strong>Issue</strong>: black screen after enter grub</p>
-<p><strong>Cause</strong>: <code>nouveau</code> not supporting NVIDIA 5060</p>
-<p><strong>Solution</strong>: add “nouveau.modeset&#x3D;0 nvidia-drm.modeset&#x3D;1” to “GRUB_CMDLINE_LINUX_DEFAULT” in &#x2F;etc&#x2F;default&#x2F;grub </p>
+<p><strong>Pitfall #1</strong></p>
+<p><strong>Issue</strong>: Black screen after enter grub</p>
+<p><strong>Cause</strong>: <code>Nouveau</code> not supporting NVIDIA 5060</p>
+<p><strong>Solution</strong>: Add “nouveau.modeset&#x3D;0 nvidia-drm.modeset&#x3D;1” to “GRUB_CMDLINE_LINUX_DEFAULT” in “&#x2F;etc&#x2F;default&#x2F;grub”</p>
 <p>–</p>
 <h3><span id="initial-config">Initial Config</span></h3><pre><code class="bash">pacman -Syu
 </code></pre>
-<p>a.Add regular user</p>
+<p><strong>a</strong>.Add regular user</p>
 <pre><code class="bash">useradd -mG wheel username-you-like
 passwd username-you-like
 </code></pre>
 <pre><code class="bash">visudo
 </code></pre>
-<p>uncomment %wheel All&#x3D;…</p>
-<p>b.Install snapper</p>
+<p>Then uncomment %wheel All&#x3D;…</p>
+<p><strong>b</strong>.Install snapper</p>
 <pre><code class="bash">pacman -S snapper snap-pac grub-btrfs inotify-tools
 systemctl enable --now grub-btrfs
 </code></pre>
-<p>REBOOT!!!!<br>config</p>
+<p>REBOOT!!!!</p>
+<p>Config snapper</p>
 <pre><code class="bash">snapper -c root create-config /
 snapper -c home create-config /home
 </code></pre>
 <pre><code class="bash">grub-mkconfig -o /boot/grub/grub.cfg
 </code></pre>
-<p>c. install <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/NVIDIA">NVIDIA dirver</a></p>
-<p>d. Install KDE Plasma and configure Niri for Wayland session</p>
-<h2><span id="uninstall-arch">Uninstall arch</span></h2><p>???</p>
-<h2><span id="garuda-mokka">Garuda Mokka</span></h2><p>???</p>
+<p><strong>c</strong>. Install <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/NVIDIA">NVIDIA driver</a></p>
+<p><strong>d</strong>. Install KDE Plasma and configure Niri for Wayland session</p>
+<h2><span id="uninstall-arch">Uninstall Arch</span></h2><p>After several emotional breakdowns, fufu booted back to Windows</p>
+<p>Delete the Linux partitions.</p>
+<p>Open <code>DiskGenius</code> and remove the corresponding EFI partition files.</p>
+<p>Open <code>BOOTICE</code> and delete the related boot entries.</p>
+<h2><span id="why-fufu-chose-garuda-mokka">Why Fufu Chose Garuda Mokka</span></h2><img src="/images/arch/garuda.png" alt="garuda mokka" title="garuda mokka" width="1500">
+That's Why!
+
+<p>Also try niri(wayland)<br><img src="/images/arch/irice1.png" alt="Irice1" title="Irice1" width="1500"><br>Find <a target="_blank" rel="noopener" href="https://github.com/Akane4444hyh/Arch-Rice">Dotfiles</a> here</p>
+<p>To Be Continue…</p>
 
     </div>
     
@@ -392,13 +405,13 @@ snapper -c home create-config /home
                 mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
                 seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
                 snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-                document.getElementById("timeDate").innerHTML = "已运行 "+dnum+" 天 "; 
-                document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒   "; 
+                document.getElementById("timeDate").innerHTML = "已運行 "+dnum+" 天 "; 
+                document.getElementById("times").innerHTML = hnum + " 小時 " + mnum + " 分 " + snum + " 秒   "; 
             } 
         setInterval("createtime()",250);
         </script>
         <span id="busuanzi_container_site_uv">
-            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+            本站訪客數<span id="busuanzi_value_site_uv"></span>人次
         </span>          
         </div>  
         
