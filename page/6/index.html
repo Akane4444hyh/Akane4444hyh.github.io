@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>It&#39;s not mygo | Akane4444の 喵喵屋</title>
+    <title>Akane4444の 喵喵屋</title>
     <meta name="author" content="Akane4444" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -44,15 +44,10 @@
 <script src="/js/lib/preview.js"></script>
 
 
-<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
-<script src="/js/lib/crypto.js"></script>
 
 
 
-
-
-
-
+<script src="/js/lib/home.js"></script>
 
 <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
 <link rel="stylesheet" href="/css/main.css" />
@@ -180,54 +175,159 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
-    <div>
-        <h1>It&#39;s not mygo</h1>
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/cover/1.jpg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>Akane4444の 喵喵屋</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
     </div>
-    <div class="info">
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2024/05/10/first/">
+        <h2 class="post-title">最初的章節</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E5%88%9D%E5%8D%87%E6%96%B0%E6%9C%88/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                初升新月
+            </a>
+        </span>
+        
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/4/27
-        </span>
-        
-        <span class="category">
-            <a href="/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                時罅糸語
-            </a>
+            2024/5/10
         </span>
         
         
     </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這是最初的章節<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不是最後的章節<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;這是最初的禱告<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;不是最後的命途</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/05/10/first/" class="go-post">閱讀全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/page/5/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">6</span>
     
     
-    <input
-        id="crypto"
-        :class="['input', cryptoStatus]"
-        :disabled="cryptoStatus === 'success'"
-        ref="crypto"
-        placeholder="被加密了~，渴望密碼喵"
-        data-encrypted="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"
-        data-shasum="6fa24919c66e455383d2e8c51dbc2cd6a5462f779fb9818a36def34440fefac9"
-        v-model="crypto"
-    />
-    <transition name="fade">
-        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
-    </transition>
     
     
-    
-    
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
+</div>
+
     </div>
     
-    
-    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/avater.jpg" alt="avatar" />
+        </div>
+        <div class="name">Akane4444</div>
+        <div class="description">
+            <p>如果純和不致死，誰會選擇做雜種喵</p>
+
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/Akane4444hyh">
+                    <i
+                        class="fa-brands fa-github fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://twitter.com/akane4444hyh">
+                    <i
+                        class="fa-brands fa-twitter fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://space.bilibili.com/1550661056">
+                    <i
+                        class="fa-brands fa-bilibili fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://lnk.bio/akane4444">
+                    <i
+                        class="fa-solid fa-link fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a href="/atom.xml">
+                    <i
+                        class="fa-solid fa-square-rss fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a href="https://akane4444hyh.github.io/">友鏈↓</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+    </div>
     
 </div>
 
@@ -284,29 +384,6 @@
         
     </div>
     <script src="/js/main.js"></script>
-    
-    
-<script
-    src="https://giscus.app/client.js"
-    data-repo="Akane4444hyh/Akane4444hyh.github.io"
-    data-repo-id="R_kgDOL2-34w"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOL2-3484CfTIx"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="https://static-argvchs.netlify.app/css/giscus.css"
-    data-lang="zh-CN"
-    crossorigin
-    async
-></script>
-
-
-
-
-
     
 </body>
 </html>
