@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Categories: 四曡半内 | Akane4444の 喵喵屋</title>
+    <title>在水仙盛開的現在喃喃自語的記錄 | Akane4444の 喵喵屋</title>
     <meta name="author" content="Akane4444" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -42,6 +42,13 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
+
+
+
 
 
 
@@ -173,14 +180,20 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
+            <div class="article">
+    <div>
+        <h1>在水仙盛開的現在喃喃自語的記錄</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/7/28
+        </span>
         
-        
-        
-        <span>
-            <a href="/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/" style="background: #e6cfe6">
+        <span class="category">
+            <a href="/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -189,110 +202,32 @@
         </span>
         
         
-        
-        <span>
-            <a href="/categories/%E5%88%9D%E5%8D%87%E6%96%B0%E6%9C%88/" style="background: #cca3cc">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                初升新月
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/%E6%8A%80%E7%B6%93%E8%82%AF%E7%B6%AE/" style="background: #e49689">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                技經肯綮
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/%E4%BA%82%E8%AA%9E%E8%83%A1%E8%A8%80/" style="background: #b399ff">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                亂語胡言
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/%E5%9B%9B%E6%9B%A1%E5%8D%8A%E5%86%85/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                四曡半内
-            </a>
-        </span>
-        
-        
-        
-        
-        
-        <span>
-            <a href="/categories/%E4%BB%96%E5%B1%B1%E4%B9%8B%E7%9F%B3/" style="background: #e49689">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                他山之石
-            </a>
-        </span>
-        
-        
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2025/12/28</div>
-            <a href="/2025/12/28/sac01/">
-                <h3>飽食終日的我</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E5%9B%9B%E6%9B%A1%E5%8D%8A%E5%86%85/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        四曡半内
-                    </a>
-                </span>
-                
-                
-            </div>
-        </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="被加密了~，渴望密碼喵"
+        data-encrypted="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"
+        data-shasum="061f7855c6e6abeb5ca950fb2eb036342662b90e2a2f364e5cbd80a2971ab3bd"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2024/10/28</div>
-            <a href="/2024/10/28/whyuninvitedguest/">
-                <h3>Why does it have to be the Uninvited Guest? 爲什麽是不速之客？</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E5%9B%9B%E6%9B%A1%E5%8D%8A%E5%86%85/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        四曡半内
-                    </a>
-                </span>
-                
-                
-            </div>
-        </div>
-    </div>
+    
+    
     
 </div>
 
@@ -349,6 +284,29 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo="Akane4444hyh/Akane4444hyh.github.io"
+    data-repo-id="R_kgDOL2-34w"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOL2-3484CfTIx"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="https://static-argvchs.netlify.app/css/giscus.css"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
     
 </body>
 </html>
