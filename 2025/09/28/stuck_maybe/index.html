@@ -44,6 +44,9 @@
 <script src="/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
+
 
 
 
@@ -201,13 +204,20 @@
         
     </div>
     
-    <div class="content" v-pre>
-        <p>&emsp;&emsp;寫在前頭，大概是z的緣故，上半年的情緒低迷。抱歉太久沒更新“喵喵屋”這一個blog了。此文獻給黑暗中的Porlownia，現在的Cici；</p>
-<span id="more"></span>
-<h2><span id="逃">逃</span></h2><p>&emsp;&emsp;本以爲，2kkm的距離只是一張3h的飛機票；<br><img src="/images/stuck/d.jpg" alt="2" title="ticket" width="800"><br>&emsp;&emsp;蘭州大學；有一説一，并不尽如人意。僞造的南方亭園，不諧調的襯着西北深色調的平頂方形宿舍；些許不和口味的蘭州特色，引入的或是本地的，只能試著稍稍填充；大學的内核大概就在一個字————逃；可是這些大概是擺脫不了的，於是只有思念過去，但過去的事物也縂改變了————一想到還是不免落下幾滴滾燙的淚水；<br><img src="/images/stuck/c.jpg" alt="2" title="Cockroach" width="800"><br>&emsp;&emsp;大一的課程不算緊凑，但是還是選擇了逃：只是精神躲在互聯網上罷了；或許有些課確實有些作用的，不過更相信Documentary；圖書館算是離家之外更像家的一個地方罷：無論是睡醒后周圍空無一人的暫時的一陣慌亂，還是只有兩對耳機裏的音樂帶來的愉悅，或是沉浸在成就中的興奮，估計是這4年唯一的記憶了；偶爾他人的細語，或許算是一種格外的裝飾罷。<br><img src="/images/stuck/a.jpg" alt="2" title="Cockroach" width="600"><br>&emsp;&emsp;最近不知爲什麽，又有想喜歡一個虛擬主播的衝動；以陪伴交換陪伴的謊言，又開始以烙印的方式刻錄在大腦的某一處了；<br>&emsp;&emsp;説實話，仍認爲<a href="https://akane4444hyh.github.io/2024/10/28/whyuninvitedguest/">bomb</a>是對的，大學是一個人的大學，創造出自己的世界是逃走的最好辦法————逃本身只是一種解決問題的方法罷了；以一種能夠活在自己的世界以鑒賞的視角閲讀周遭，像是在閲讀一本書一樣閲讀自己與他人的連結，現在是這樣，未來也是這樣。<br><img src="/images/stuck/b.jpg" alt="2" title="Cockroach" width="1200"></p>
-<h2><span id="隨便寫寫">隨便寫寫</span></h2><p>&emsp;&emsp;現在正在圖書館裏，寫到這裏，有種疲憊的力量感，語言文字功力下降了，不過重新撿起來這個習慣米，最近還想做個自學記錄，希望未來看到會有感觸，下個月就寫書評了。看看有沒有機會做自媒體，設備還差一些，總之祝悲傷。晚上拍點素材再加圖片，估計這些blog也只有我自己一個人看米。<br>&emsp;&emsp;最近有些消費上癮了，給鳴潮充了924，總感覺可能是未來某種習慣的開端。不過也是忍住十多天不喝奶茶了。寫累了，隨便打點字，晚上想整理下學習的方向，再寫一個blog，正經的。其實今天是9.26，不過還是喜歡當成28號喵。<br>&emsp;&emsp;一年真的能改變好多，看了看前幾個月的blog，感覺確實精神有些被高考沉默了，第一次寫blog是去年的5月，但感覺好像已經過了好久了，以後blog月更的。</p>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="被加密了~，渴望密碼喵"
+        data-encrypted="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"
+        data-shasum="c64443c7f93bfb1c1f9f92db33910c144995faf03567423e156fc7aa3329457a"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     

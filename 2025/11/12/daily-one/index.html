@@ -44,6 +44,9 @@
 <script src="/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
+
 
 
 
@@ -201,10 +204,20 @@
         
     </div>
     
-    <div class="content" v-pre>
-        <p>現在是週三。最近似乎得了胃病。<span id="more"></span>也不知是什麼原因，肚子常常痛的，或者那不是痛，可能是在彰顯存在罷。<br>早上8：15起牀，8：23吃了兩個包子一杯豆漿，所以早飯就是10：30的手抓餅，以及中飯是即將到來16：00的任何什麼東西，晚飯就要體育課上過的21：00過後了。<br>少喫多餐，喫飯成爲一種類似於扔垃圾順手的事。我曾學習達芬奇的作息，但糟糕的睡眠和時常失靈的排泄系統讓我最終放棄了。<br>肉是很多的，很好的，但我不喜歡。我只想喫南瓜葉，乾鍋花菜，炒胡蘿蔔，炒南瓜，梅乾菜炒苦瓜，冬瓜湯，白蘿蔔湯，莧菜，青菜，大白菜，芹菜甚至我並不是那麼喜歡的包心菜，香菜，蔥，海帶。但這裏沒有，唯一的素藏在葷菜的犄角旮旯裏了，或是以某種不這麼新鮮的形式出現在自選餐裏了。<br>於是我就吃水果<br>水果拼盤，水果撈，每每路過水果店，購買一個梨或蘋果，甚至開始買果汁。這經常發生在飯後，於是飽脹的肚子更飽了，然後就是一坐幾個小時，想想這可能或許是我肚子痛的原因。説到吃飽，我高中是吃不飽的，往往一個人能吃1.5-2個正常高中男性的份，我總想要把食量減少歸結於水土不服，然後就是蔬菜吃少了，這是有道理的，但主要原因感覺還是我裝不下去了，我確實吃不了這麽多。但是我還是想説，你蘭能不能有個像樣的素菜呵！</p>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="被加密了~，渴望密碼喵"
+        data-encrypted="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"
+        data-shasum="f594cfea9ae4745e467e0133a0b3d423d6c71ba8b66a0608eee9e40977bf5652"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     

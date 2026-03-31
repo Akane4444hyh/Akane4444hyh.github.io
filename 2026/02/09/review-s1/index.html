@@ -44,6 +44,9 @@
 <script src="/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
+
 
 
 
@@ -201,28 +204,20 @@
         
     </div>
     
-    <div class="content" v-pre>
-        <h2><span id="引子">引子</span></h2><p>&emsp;&emsp;這大概是一篇對轉瞬即逝的大一上的訣別</p>
-<span id="more"></span>
-<p>&emsp;&emsp;並非玫瑰色，也絕非灰黑色的。並沒有渴望許久的非日常，也不只是平淡的日常。準備的過程總是無反饋的無聊，這狀態似乎很早知道的。</p>
-<p>&emsp;&emsp;或許太容易被環境干擾，選擇的謬誤似乎從一開始就注定了，好在這種或許並非無用的無用功，在這段計劃之外的路程，也算是有獎勵的支線任務。她還在遠方,或許不在。或許有人把這稱之爲流放，可惜網絡原住民不會在意現實的現實的坐標。</p>
-<p>&emsp;&emsp;第一部分從開頭到結局並非如人意。</p>
-<h2><span id="最初的最初">最初的最初</span></h2><p>&emsp;&emsp;無法思考如何穿越這2000km而不回頭的，或許是一種不切實際的幻想和那些對寒冷氣候的獨鍾。</p>
-<p>&emsp;&emsp;現實卻是感冒的侵蝕和食物的異形，後來或許習慣了</p>
-<p>&emsp;&emsp;舍友很快就熟悉了，各自拉上了帘子。幸運的拿到了一樣的學委，多了一份社交的重量</p>
-<p>&emsp;&emsp;很快秋天一過，便來到了冬天</p>
-<h2><span id="每天每天">每天每天</span></h2><p>&emsp;&emsp;早八實在不多，晚睡晚起，大概就是打遊戲和臨時抱佛腳的循環，偶爾提前學一點，偶爾參加個小活動，于是太陽上升落下</p>
-<p>&emsp;&emsp;週末也是這樣</p>
-<p>&emsp;&emsp;似乎回到了從前某段沉溺於虛擬主播的時間，起牀定的是東雪蓮的罵誰罕見，睡覺聽的是花崎千惠的助眠</p>
-<h2><span id="別的">別的</span></h2><p>&emsp;&emsp;加入了新聞中心學生會，其實也沒有什麼活</p>
-<p>&emsp;&emsp;或許大學本身就是這麼無聊的</p>
-<p>&emsp;&emsp;</p>
-<p>&emsp;&emsp;本來以爲有寫不完的故事，發現並非如此，或許是忘記了，或許是不想提及。在兩個人那裏聽到同樣一句話：不要美化爲走的那條路；他們都錯了。他們只是在美化現在走向的那條路。a知道現在在做什麼。</p>
-<p>&emsp;&emsp;喜歡一種寄人籬下的感覺，可是好久沒有這樣的感覺了。</p>
-<h2><span id="未來">未來</span></h2><p>&emsp;&emsp;做想做的事吧 已經沒有多少時間 希望下次回顧能寫點不一樣的</p>
-<p>&emsp;&emsp;前幾天在linux rice，下一篇博客。</p>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="被加密了~，渴望密碼喵"
+        data-encrypted="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"
+        data-shasum="982b24789862246ee4a6f04aba5856b80bb597140a4d593073af2a31bda4ed79"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     
