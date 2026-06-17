@@ -44,6 +44,9 @@
 <script src="/js/lib/preview.js"></script>
 
 
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="/js/lib/crypto.js"></script>
+
 
 
 
@@ -189,22 +192,32 @@
             2026/3/28
         </span>
         
+        <span class="category">
+            <a href="/categories/%E6%99%82%E7%BD%85%E7%B3%B8%E8%AA%9E/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                時罅糸語
+            </a>
+        </span>
+        
         
     </div>
     
-    <div class="content" v-pre>
-        <p>很遺憾的告訴大家<br>博主將在今晚離世<br>所以<br>本部落格將不再更新<br>要在這裡和大家說再見了</p>
-<p>如果一直注意本博客的寫作習慣<br>會發現「我」—— 這個指向自身的代詞<br>往往消失的<br>這宣誓著一種令人厭惡的分離感<br>實在不喜歡在別人的視角<br>審視只屬於自己的自己<br>所以便逃避</p>
-<p>用各種暗喻<br>各種小物件<br>各種獨屬的情懷構成的<br>實在不敢再寫的第二遍同樣的發音或詞成<br>一段一段的不成句的輸出<br>這算是一種概括</p>
-<p>淡紫+蒼灰<br>透明圓角矩形<br>四周衹有克萊因藍液體的沙島<br>也該讓茜紅覆蓋我的屍骸了</p>
-<p>最遠最遠的記憶<br>那面前是巨大的奶奶的背脊，背後是墻，上面是上鋪的木板，我躺在中間的床鋪上。<br>忘記了是白天是黑夜，是夏天是冬天 是拿著書是不是，或許都有。那時的我 給自己複述《笑貓日記》—— 喜歡這套書 有她的味道，或許也有自己理由</p>
-<p>最早最早的能記住的夢<br>大概是幼兒園的午睡<br>夢到在玩「割繩子」</p>
-<p>曾經最愛最愛的人…<br>攝影的愛好，閱讀的習慣，發音的方式<br>她的模仿者<br>模仿的不像<br>這樣也好<br>3月28日<br>她的生日<br>希望這衹是一種習慣<br>構成夢境的這些那些<br>不能再提</p>
-<p>網絡<br>構成的九成的我<br>賽博世界的原住民<br>習慣了閲讀他人的幻想和現實<br>最終構成的不再和父母是一個物種罷</p>
-<p>活在過去是冠于我曾經的一切<br>現在我將脫去這頂帽子</p>
-<p>再見！戈多！<br>不需要在等待了</p>
-
-    </div>
+    
+    <input
+        id="crypto"
+        :class="['input', cryptoStatus]"
+        :disabled="cryptoStatus === 'success'"
+        ref="crypto"
+        placeholder="被加密了~，渴望密碼喵"
+        data-encrypted="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"
+        data-shasum="90f08fdd2b12ec6048edcad4ce81ed55c8b881ce886a05fb5cff33d9439abceb"
+        v-model="crypto"
+    />
+    <transition name="fade">
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+    </transition>
     
     
     
