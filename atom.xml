@@ -6,7 +6,7 @@
   <link href="https://akane4444hyh.github.io/atom.xml" rel="self"/>
   
   <link href="https://akane4444hyh.github.io/"/>
-  <updated>2026-05-26T04:42:35.415Z</updated>
+  <updated>2026-06-17T05:26:37.032Z</updated>
   <id>https://akane4444hyh.github.io/</id>
   
   <author>
@@ -18,13 +18,13 @@
   
   <entry>
     <title>Streaming</title>
-    <link href="https://akane4444hyh.github.io/2026/05/26/Streaming/"/>
-    <id>https://akane4444hyh.github.io/2026/05/26/Streaming/</id>
-    <published>2026-05-26T04:34:05.000Z</published>
-    <updated>2026-05-26T04:42:35.415Z</updated>
+    <link href="https://akane4444hyh.github.io/2026/05/28/Streaming/"/>
+    <id>https://akane4444hyh.github.io/2026/05/28/Streaming/</id>
+    <published>2026-05-28T04:34:05.000Z</published>
+    <updated>2026-06-17T05:26:37.032Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;Sunshine-Moonlight-Tailscale-Streaming-Setup-Guide&quot;&gt;&lt;a href=&quot;#Sunshine-Moonlight-Tailscale-Streaming-Setup-Guide&quot; class=&quot;headerlink&quot; title=&quot;Sunshine + Moonlight + Tailscale Streaming Setup Guide&quot;&gt;&lt;/a&gt;Sunshine + Moonlight + Tailscale Streaming Setup Guide&lt;/h1&gt;&lt;h2 id=&quot;Goal&quot;&gt;&lt;a href=&quot;#Goal&quot; class=&quot;headerlink&quot; title=&quot;Goal&quot;&gt;&lt;/a&gt;Goal&lt;/h2&gt;&lt;p&gt;Build a remote&amp;#x2F;local game streaming setup with:&lt;/p&gt;
+    <summary type="html">&lt;h2 id=&quot;Sunshine-Moonlight-Tailscale-Streaming-Setup-Guide&quot;&gt;&lt;a href=&quot;#Sunshine-Moonlight-Tailscale-Streaming-Setup-Guide&quot; class=&quot;headerlink&quot; title=&quot;Sunshine + Moonlight + Tailscale Streaming Setup Guide&quot;&gt;&lt;/a&gt;Sunshine + Moonlight + Tailscale Streaming Setup Guide&lt;/h2&gt;&lt;h3 id=&quot;Goal&quot;&gt;&lt;a href=&quot;#Goal&quot; class=&quot;headerlink&quot; title=&quot;Goal&quot;&gt;&lt;/a&gt;Goal&lt;/h3&gt;&lt;p&gt;Build a remote&amp;#x2F;local game streaming setup with:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Linux PC as the host&lt;/li&gt;
 &lt;li&gt;Phone as the client&lt;/li&gt;

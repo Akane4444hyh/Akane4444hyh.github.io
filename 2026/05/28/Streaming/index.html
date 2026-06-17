@@ -186,14 +186,14 @@
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2026/5/26
+            2026/5/28
         </span>
         
         
     </div>
     
     <div class="content" v-pre>
-        <h1><span id="sunshine-moonlight-tailscale-streaming-setup-guide">Sunshine + Moonlight + Tailscale Streaming Setup Guide</span></h1><h2><span id="goal">Goal</span></h2><p>Build a remote&#x2F;local game streaming setup with:</p>
+        <h2><span id="sunshine-moonlight-tailscale-streaming-setup-guide">Sunshine + Moonlight + Tailscale Streaming Setup Guide</span></h2><h3><span id="goal">Goal</span></h3><p>Build a remote&#x2F;local game streaming setup with:</p>
 <ul>
 <li>Linux PC as the host</li>
 <li>Phone as the client</li>
@@ -202,30 +202,30 @@
 <li>Tailscale for remote networking<span id="more"></span>\</li>
 </ul>
 <hr>
-<h1><span id="architecture">Architecture</span></h1><h2><span id="host">Host</span></h2><ul>
+<h2><span id="architecture">Architecture</span></h2><h3><span id="host">Host</span></h3><ul>
 <li>OS: Garuda Linux</li>
 <li>Streaming Server: Sunshine</li>
 <li>Mesh VPN: Tailscale</li>
 </ul>
-<h2><span id="client">Client</span></h2><ul>
+<h3><span id="client">Client</span></h3><ul>
 <li>Android phone</li>
 <li>Streaming Client: Moonlight</li>
 <li>Mesh VPN: Tailscale</li>
 </ul>
 <hr>
-<h1><span id="installation">Installation</span></h1><h2><span id="1-install-sunshine">1. Install Sunshine</span></h2><h3><span id="arch-x2f-garuda-linux">Arch &#x2F; Garuda Linux</span></h3><pre><code class="bash">sudo yay -S sunshine
+<h2><span id="installation">Installation</span></h2><h3><span id="1-install-sunshine">1. Install Sunshine</span></h3><h4><span id="arch-x2f-garuda-linux">Arch &#x2F; Garuda Linux</span></h4><pre><code class="bash">sudo yay -S sunshine
 </code></pre>
 <p>Enable and start Sunshine:</p>
 <pre><code class="bash">sunshine &amp;
 </code></pre>
 <hr>
-<h2><span id="2-install-tailscale">2. Install Tailscale</span></h2><pre><code class="bash">curl -fsSL https://tailscale.com/install.sh | sh
+<h3><span id="2-install-tailscale">2. Install Tailscale</span></h3><pre><code class="bash">curl -fsSL https://tailscale.com/install.sh | sh
 </code></pre>
 <p>Login:</p>
 <pre><code class="bash">sudo tailscale up
 </code></pre>
 <hr>
-<h1><span id="phone-setup">Phone Setup</span></h1><h2><span id="required-apps">Required Apps</span></h2><p>Install:</p>
+<h2><span id="phone-setup">Phone Setup</span></h2><h3><span id="required-apps">Required Apps</span></h3><p>Install:</p>
 <ul>
 <li>Moonlight</li>
 <li>Tailscale</li>
